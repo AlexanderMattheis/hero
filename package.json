@@ -1,7 +1,7 @@
 {
   "name": "hero",
   "version": "2019.6.11",
-  "main": "main.js",
+  "main": "scripts/main.js",
   "scripts": {
     "start": "electron ."
   },
