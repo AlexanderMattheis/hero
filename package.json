@@ -1,14 +1,17 @@
 {
-  "name": "hero",
+  "name": "Hero",
   "version": "2019.6.11",
   "main": "scripts/main.js",
   "scripts": {
     "start": "electron ."
   },
   "devDependencies": {
+    "bootstrap": "^4.3.1",
     "electron": "^5.0.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^1.9.1"
+  },
   "author": "Alexander Mattheis et al.",
   "license": "Unlicense",
   "description": "An app to create multiplayer quiz.",

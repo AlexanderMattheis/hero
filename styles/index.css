@@ -1,0 +1,58 @@
+html, body {
+    background-color: #AC1D25;
+}
+
+/* CLASSES */
+.block-align {
+    display: block !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.page-center {
+    left: 50%;
+    position: absolute;
+    top: 70%;
+    transform: translate(-50%, -50%); /* sets the pivot point to center */
+}
+
+.right-corner-zoom-bar {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    width: 200px;
+}
+
+.round-corners {
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+.white-text {
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px #333333;
+}
+
+.zoom-slider {
+    background: #d3d3d3;
+    border-radius: 5px;
+    height: 10px;
+    outline: none;
+    transition: opacity .2s;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-transition: .2s;
+}
+
+.zoom-slider::-webkit-slider-thumb {
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+}
