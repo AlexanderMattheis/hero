@@ -5,6 +5,8 @@ const SLIDER_MAX = 5;
 
 const zoomSlider = document.getElementById('zoom-slider');
 
+webFrame.setZoomLevel(0);
+
 document.addEventListener('wheel', function (event) {
     let value = parseInt(zoomSlider.value);
 
