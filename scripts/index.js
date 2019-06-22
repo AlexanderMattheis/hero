@@ -1,30 +1,41 @@
-const {webFrame} = require('electron');
+const filesystem = require('fs');
 
-const SLIDER_MIN = 0;
-const SLIDER_MAX = 5;
+// constants
+const MIN_NUMBER_OF_TEAMS = 1;
 
-const zoomSlider = document.getElementById('zoom-slider');
+// variables
+let gameReady = false;
 
-webFrame.setZoomLevel(0);
+document.addEventListener('keyup', function (event) {
+    if (!gameReady && event.key === 'Enter') {
+        const numOfTeamsLabel= document.getElementById("num-of-teams-label");
+        const numOfTeamsInput = document.getElementById("num-of-teams-input");
 
-document.addEventListener('wheel', function (event) {
-    let value = parseInt(zoomSlider.value);
+        let numberOfTeams = getNumber(numOfTeamsInput, MIN_NUMBER_OF_TEAMS);
+        hide(numOfTeamsLabel, numOfTeamsInput);
+        readInQuestionFiles();
+        gameReady = true;
+    } else if (gameReady) {
+        if (event.key === 'a') {
 
-    if (event.wheelDelta > 0) {
-        if (value < SLIDER_MAX) {
-            value++;
-        }
-    } else if (event.wheelDelta < 0) {
-        if (value > SLIDER_MIN) {
-            value--;
+        } else if (event.key === 'b') {
+
+        } else if (event.key === 'c') {
+            
+        } else if (event.key === 'd') {
+
         }
     }
-
-    zoomSlider.value = value;
-    webFrame.setZoomLevel(value);
 });
 
-zoomSlider.addEventListener('input', function () {
-    let value = this.value;
-    webFrame.setZoomLevel(parseInt(value));
-}, false);
+function readInQuestionFiles() {
+    filesystem.readdir(INPUT_FOLDER, (err, fileNames) => {
+        fileNames.forEach(fileName => {
+            
+        });
+    });
+}
+
+function readInQuestionFile() {
+    
+}

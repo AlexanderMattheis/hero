@@ -1,0 +1,1 @@
+const INPUT_FOLDER = './input';

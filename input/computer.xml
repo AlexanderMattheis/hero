@@ -1,0 +1,23 @@
+<quiz>
+    <question>
+        <text>The abbreviation of the asymmetric encryption method RSA stands for</text>
+        <options>
+            <correctOption>Rivest, Shamir und Adleman</correctOption>
+            <wrongOption>Random, Secure and Asymmetric</wrongOption>
+            <wrongOption>Research for Secure and Asymmetric Algorithms</wrongOption>
+            <wrongOption>Ronald, Stephan und Adrian</wrongOption>
+        </options>
+    </question>
+
+    <question>
+        <text>Linus Benedict Torvalds is</text>
+        <options>
+            <wrongOption>Developer of the operating system Windows XP</wrongOption>
+            <correctOption>Developer of the distributed version management system Git</correctOption>
+            <wrongOption>Co-founder of payment system PayPal</wrongOption>
+            <wrongOption>A well-known hacker from the Ruhrpott</wrongOption>
+        </options>
+    </question>
+</quiz>
+
+
