@@ -1,5 +1,11 @@
 function hide(...elements) {
     elements.forEach((element) => {
-        element.setAttribute('style', 'display: none !important');
+        element.classList.add('d-none');
+    });
+}
+
+function show(...elements) {
+    elements.forEach((element) => {
+        element.classList.remove('d-none');
     });
 }

@@ -1,9 +1,15 @@
 .right-corner-zoom-bar {
+    opacity: 0.2;
     position: fixed;
     right: 20px;
     top: 10px;
+    transition: opacity 1s;
     width: 200px;
 }
+
+.right-corner-zoom-bar:hover {
+     opacity: 1.0;
+ }
 
 .zoom-slider {
     background: #d3d3d3;

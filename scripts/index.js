@@ -9,17 +9,13 @@ const MIN_NUMBER_OF_TEAMS = 1;
 
 // variables
 let gameReady = false;
+
+let numberOfTeams = 0;
 let questionData = {};
 
 document.addEventListener('keyup', function (event) {
     if (!gameReady && event.key === 'Enter') {
-        const numOfTeamsLabel= document.getElementById("num-of-teams-label");
-        const numOfTeamsInput = document.getElementById("num-of-teams-input");
-
-        let numberOfTeams = getNumber(numOfTeamsInput, MIN_NUMBER_OF_TEAMS);
-        hide(numOfTeamsLabel, numOfTeamsInput);
-        loadQuestions(paths.INPUT_FOLDER);
-        gameReady = true;
+        gameReady = initGame();
     } else if (gameReady) {
         if (event.key === 'a') {
 
@@ -33,10 +29,32 @@ document.addEventListener('keyup', function (event) {
     }
 });
 
-function loadQuestions(directoryPath) {
+function initGame() {
+    numberOfTeams = retrieveNumberOfTeams();
+    questionData = retrieveQuestions(paths.INPUT_FOLDER);
+
+    return true;
+}
+
+function retrieveNumberOfTeams() {
+    function getNumberOfTeams() {
+        const numOfTeamsInput = document.getElementById("num-of-teams-input");
+        return getNumber(numOfTeamsInput, MIN_NUMBER_OF_TEAMS);
+    }
+
+    const numOfTeamsContainer = document.getElementById("num-of-teams-container");
+    const numberOfTeams = getNumberOfTeams();
+
+    hide(numOfTeamsContainer);
+    return numberOfTeams;
+}
+
+function retrieveQuestions(directoryPath) {
     const loadingTextContainer = document.getElementById('loading-text-container');
 
-    loadingTextContainer.classList.remove('d-none');
-    questionData = questionsLoader.load(directoryPath);
-    loadingTextContainer.classList.add('d-none');
+    show(loadingTextContainer);
+    const questionData = questionsLoader.load(directoryPath);
+    hide(loadingTextContainer);
+
+    return questionData;
 }

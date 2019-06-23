@@ -7,8 +7,10 @@
 
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="../styles/view/components/question-selector.css">
         <link rel="stylesheet" href="../styles/view/components/zoom-slider.css">
 
+        <script src="../node_modules/fitty/dist/fitty.min.js"></script>
         <script src="../node_modules/jquery/jquery.min.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </head>
@@ -19,15 +21,43 @@
             <input type="range" min="0" value="0" max="5" step="1" id="zoom-slider" class="zoom-slider">
         </div>
 
-        <div id="loading-text-container" class="page-center d-none">
-            <span class="white-text">Loading ...</span>
-        </div>
-
-        <div class="page-center">
+        <div id="num-of-teams-container" class="page-center d-none">
             <label for="num-of-teams-input" id="num-of-teams-label" class="block-align center-text white-text">
                 Number of Teams
             </label>
             <input type="text" id="num-of-teams-input" class="center-text round-corners">
+        </div>
+
+        <div id="loading-text-container" class="page-center d-none">
+            <span class="white-text">Loading ...</span>
+        </div>
+
+        <div id="question-container" class="question-selector">
+            <div id="question-text" class="question-text">
+                The abbreviation of the asymmetric encryption method RSA stands for
+            </div>
+
+            <div id="question-options">
+                <div id="optionA" class="option left">
+                    <div class="option-name">A:</div>
+                    <div class="option-text">Rivest, Shamir and Adleman</div>
+                </div>
+
+                <div id="optionB" class="option right">
+                    <div class="option-name">B:</div>
+                    <div class="option-text">Random, Secure and Asymmetric</div>
+                </div>
+
+                <div id="optionC" class="option left">
+                    <div class="option-name">C:</div>
+                    <div class="option-text">Research for Secure and Asymmetric Algorithms</div>
+                </div>
+
+                <div id="optionD" class="option right">
+                    <div class="option-name">D:</div>
+                    <div class="option-text">Ronald, Stephan and Adrian</div>
+                </div>
+            </div>
         </div>
 
         <!-- BASICS -->
@@ -40,4 +70,3 @@
         <script src="../scripts/index.js"></script>
     </body>
 </html>
-

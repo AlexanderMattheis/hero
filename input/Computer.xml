@@ -2,10 +2,10 @@
     <question>
         <text>The abbreviation of the asymmetric encryption method RSA stands for</text>
         <options>
-            <correctOption>Rivest, Shamir und Adleman</correctOption>
+            <correctOption>Rivest, Shamir and Adleman</correctOption>
             <wrongOption>Random, Secure and Asymmetric</wrongOption>
             <wrongOption>Research for Secure and Asymmetric Algorithms</wrongOption>
-            <wrongOption>Ronald, Stephan und Adrian</wrongOption>
+            <wrongOption>Ronald, Stephan and Adrian</wrongOption>
         </options>
     </question>
 
