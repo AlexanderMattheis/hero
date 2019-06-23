@@ -4,10 +4,14 @@
     display: inline-block;
     float: left;
     margin-bottom: 10px;
-    max-height: 50px;
     max-width: calc(50% - 20px);;
-    padding: 10px;
+    padding: 16px 0 12px 16px;
     width: calc(50% - 20px);
+}
+
+.option-highlight {
+    background-color: #222222;
+    color: white;
 }
 
 .option.left {
@@ -39,7 +43,7 @@
 }
 
 .question-selector {
-    bottom: 0;
+    bottom: 5px;
     max-height: 200px;
     position: fixed;
     width: 100%;

@@ -9,3 +9,11 @@ function show(...elements) {
         element.classList.remove('d-none');
     });
 }
+
+function unhighlight(option) {
+    option.classList.remove('option-highlight');
+}
+
+function highlight(option) {
+    option.classList.add('option-highlight');
+}

@@ -18,13 +18,13 @@ document.addEventListener('keyup', function (event) {
         gameReady = initGame();
     } else if (gameReady) {
         if (event.key === 'a') {
-
+            selectAnswer(0);
         } else if (event.key === 'b') {
-
+            selectAnswer(1);
         } else if (event.key === 'c') {
-            
+            selectAnswer(2);
         } else if (event.key === 'd') {
-
+            selectAnswer(3);
         }
     }
 });
@@ -32,6 +32,7 @@ document.addEventListener('keyup', function (event) {
 function initGame() {
     numberOfTeams = retrieveNumberOfTeams();
     questionData = retrieveQuestions(paths.INPUT_FOLDER);
+    showQuestions();
 
     return true;
 }
@@ -57,4 +58,17 @@ function retrieveQuestions(directoryPath) {
     hide(loadingTextContainer);
 
     return questionData;
+}
+
+function showQuestions() {
+    show(document.getElementById('question-container'));
+}
+
+function selectAnswer(number) {
+    for (const option of options) {
+        unhighlight(option);
+    }
+
+    const selectedAnswer = options[number];
+    highlight(selectedAnswer);
 }

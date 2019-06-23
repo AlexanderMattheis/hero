@@ -21,7 +21,7 @@
             <input type="range" min="0" value="0" max="5" step="1" id="zoom-slider" class="zoom-slider">
         </div>
 
-        <div id="num-of-teams-container" class="page-center d-none">
+        <div id="num-of-teams-container" class="page-center">
             <label for="num-of-teams-input" id="num-of-teams-label" class="block-align center-text white-text">
                 Number of Teams
             </label>
@@ -32,28 +32,28 @@
             <span class="white-text">Loading ...</span>
         </div>
 
-        <div id="question-container" class="question-selector">
+        <div id="question-container" class="question-selector d-none">
             <div id="question-text" class="question-text">
-                The abbreviation of the asymmetric encryption method RSA stands for
+                The abbreviation of the asymmetric encryption method RSA stands for ...?
             </div>
 
             <div id="question-options">
-                <div id="optionA" class="option left">
+                <div id="option-a" class="option left">
                     <div class="option-name">A:</div>
                     <div class="option-text">Rivest, Shamir and Adleman</div>
                 </div>
 
-                <div id="optionB" class="option right">
+                <div id="option-b" class="option right">
                     <div class="option-name">B:</div>
                     <div class="option-text">Random, Secure and Asymmetric</div>
                 </div>
 
-                <div id="optionC" class="option left">
+                <div id="option-c" class="option left">
                     <div class="option-name">C:</div>
                     <div class="option-text">Research for Secure and Asymmetric Algorithms</div>
                 </div>
 
-                <div id="optionD" class="option right">
+                <div id="option-d" class="option right">
                     <div class="option-name">D:</div>
                     <div class="option-text">Ronald, Stephan and Adrian</div>
                 </div>
@@ -65,6 +65,7 @@
         <script src="../scripts/view/value-retriever.js"></script>
 
         <!-- COMPONENTS -->
+        <script src="../scripts/view/components/question-options.js"></script>
         <script src="../scripts/view/components/zoom-slider.js"></script>
 
         <script src="../scripts/index.js"></script>

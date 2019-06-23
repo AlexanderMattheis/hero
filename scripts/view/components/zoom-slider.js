@@ -25,12 +25,22 @@ function initZoom() {
 
         zoomSlider.value = value;
         webFrame.setZoomLevel(value);
+        updateHeights();
     });
 
     zoomSlider.addEventListener('input', function () {
         let value = this.value;
         webFrame.setZoomLevel(parseInt(value));
+        updateHeights();
     }, false);
+}
+
+function updateHeights() {
+    let maxHeight = getMaxHeight(options);
+
+    for (const option of options) {
+        option.style.height = maxHeight + 'px';
+    }
 }
 
 initZoom();

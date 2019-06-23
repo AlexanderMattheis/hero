@@ -1,5 +1,6 @@
 html, body {
     background-color: #AC1D25;
+    user-select: none;
 }
 
 /* CLASSES */
