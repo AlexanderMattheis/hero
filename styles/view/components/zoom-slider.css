@@ -1,0 +1,26 @@
+.right-corner-zoom-bar {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    width: 200px;
+}
+
+.zoom-slider {
+    background: #d3d3d3;
+    border-radius: 5px;
+    height: 10px;
+    outline: none;
+    transition: opacity .2s;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-transition: .2s;
+}
+
+.zoom-slider::-webkit-slider-thumb {
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+}

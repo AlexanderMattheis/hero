@@ -7,6 +7,7 @@
 
         <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../styles/index.css">
+        <link rel="stylesheet" href="../styles/view/components/zoom-slider.css">
 
         <script src="../node_modules/jquery/jquery.min.js"></script>
         <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -18,6 +19,10 @@
             <input type="range" min="0" value="0" max="5" step="1" id="zoom-slider" class="zoom-slider">
         </div>
 
+        <div id="loading-text-container" class="page-center d-none">
+            <span class="white-text">Loading ...</span>
+        </div>
+
         <div class="page-center">
             <label for="num-of-teams-input" id="num-of-teams-label" class="block-align center-text white-text">
                 Number of Teams
@@ -26,7 +31,6 @@
         </div>
 
         <!-- BASICS -->
-        <script src="../scripts/system/paths.js"></script>
         <script src="../scripts/view/element-interactions.js"></script>
         <script src="../scripts/view/value-retriever.js"></script>
 

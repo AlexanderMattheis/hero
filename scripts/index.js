@@ -1,10 +1,15 @@
-const filesystem = require('fs');
+const electron = require('electron');
+
+const remote = electron.remote;
+const paths = remote.require('./system/defaults/paths');
+const questionsLoader = remote.require('./system/io/questions-loader');
 
 // constants
 const MIN_NUMBER_OF_TEAMS = 1;
 
 // variables
 let gameReady = false;
+let questionData = {};
 
 document.addEventListener('keyup', function (event) {
     if (!gameReady && event.key === 'Enter') {
@@ -13,7 +18,7 @@ document.addEventListener('keyup', function (event) {
 
         let numberOfTeams = getNumber(numOfTeamsInput, MIN_NUMBER_OF_TEAMS);
         hide(numOfTeamsLabel, numOfTeamsInput);
-        readInQuestionFiles();
+        loadQuestions(paths.INPUT_FOLDER);
         gameReady = true;
     } else if (gameReady) {
         if (event.key === 'a') {
@@ -28,14 +33,10 @@ document.addEventListener('keyup', function (event) {
     }
 });
 
-function readInQuestionFiles() {
-    filesystem.readdir(INPUT_FOLDER, (err, fileNames) => {
-        fileNames.forEach(fileName => {
-            
-        });
-    });
-}
+function loadQuestions(directoryPath) {
+    const loadingTextContainer = document.getElementById('loading-text-container');
 
-function readInQuestionFile() {
-    
+    loadingTextContainer.classList.remove('d-none');
+    questionData = questionsLoader.load(directoryPath);
+    loadingTextContainer.classList.add('d-none');
 }
