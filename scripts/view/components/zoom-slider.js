@@ -25,21 +25,23 @@ function initZoom() {
 
         zoomSlider.value = value;
         webFrame.setZoomLevel(value);
-        updateHeights();
+        updateOptionsHeights();
     });
 
     zoomSlider.addEventListener('input', function () {
         let value = this.value;
         webFrame.setZoomLevel(parseInt(value));
-        updateHeights();
+        updateOptionsHeights();
     }, false);
 }
 
-function updateHeights() {
+function updateOptionsHeights() {
     let maxHeight = getMaxHeight(options);
 
-    for (const option of options) {
-        option.style.height = maxHeight + 'px';
+    if (maxHeight > 0) {
+        for (const option of options) {
+            option.style.height = (maxHeight < OPTION_MAX_HEIGHT ? maxHeight : OPTION_MAX_HEIGHT) + 'px';
+        }
     }
 }
 

@@ -1,3 +1,6 @@
+// constants
+const OPTION_MAX_HEIGHT = 52;
+
 // elements
 const optionA = document.getElementById('option-a');
 const optionB = document.getElementById('option-b');

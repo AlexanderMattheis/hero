@@ -12,6 +12,7 @@ let gameReady = false;
 
 let numberOfTeams = 0;
 let questionData = {};
+let currentlySelectedAnswer = -1;
 
 document.addEventListener('keyup', function (event) {
     if (!gameReady && event.key === 'Enter') {
@@ -25,6 +26,8 @@ document.addEventListener('keyup', function (event) {
             selectAnswer(2);
         } else if (event.key === 'd') {
             selectAnswer(3);
+        } else if (event.key === 'Enter' && currentlySelectedAnswer !== -1) {
+            checkAnswer(currentlySelectedAnswer);
         }
     }
 });
@@ -33,6 +36,7 @@ function initGame() {
     numberOfTeams = retrieveNumberOfTeams();
     questionData = retrieveQuestions(paths.INPUT_FOLDER);
     showQuestions();
+    updateOptionsHeights();
 
     return true;
 }
@@ -65,10 +69,16 @@ function showQuestions() {
 }
 
 function selectAnswer(number) {
+    currentlySelectedAnswer = number;
+
     for (const option of options) {
         unhighlight(option);
     }
 
     const selectedAnswer = options[number];
     highlight(selectedAnswer);
+}
+
+function checkAnswer(number) {
+
 }
