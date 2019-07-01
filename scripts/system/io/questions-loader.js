@@ -31,6 +31,7 @@ function loadAndParseFile(parser, directoryPath, fileName) {
     const filePath = directoryPath + '/' + fileName;
     const fileData = filesystem.readFileSync(filePath, 'utf8');
 
+    debugger;
     parser.parseString(fileData, (parsingError, jsonData) => {
         if (parsingError) {
             throw parsingError;

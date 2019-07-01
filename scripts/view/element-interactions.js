@@ -10,10 +10,10 @@ function show(...elements) {
     });
 }
 
-function unhighlight(option) {
-    option.classList.remove('option-highlight');
-}
-
-function highlight(option) {
-    option.classList.add('option-highlight');
+function changeHighlight(option) {
+    if (option.classList.contains('option-highlight')) {
+        option.classList.remove('option-highlight');
+    } else {
+        option.classList.add('option-highlight');
+    }
 }

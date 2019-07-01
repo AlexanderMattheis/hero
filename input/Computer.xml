@@ -1,23 +1,21 @@
-<questions>
-    <question>
-        <text>The abbreviation of the asymmetric encryption method RSA stands for</text>
-        <options>
-            <correctOption>Rivest, Shamir and Adleman</correctOption>
-            <wrongOption>Random, Secure and Asymmetric</wrongOption>
-            <wrongOption>Research for Secure and Asymmetric Algorithms</wrongOption>
-            <wrongOption>Ronald, Stephan and Adrian</wrongOption>
-        </options>
-    </question>
+<quiz>
+    <questions>
+        <text>The abbreviation of the asymmetric encryption method RSA stands for ...?</text>
+        <optionA>Rivest, Shamir and Adleman</optionA>
+        <optionB>Random, Secure and Asymmetric</optionB>
+        <optionC>Research for Secure and Asymmetric Algorithms</optionC>
+        <optionD>Ronald, Stephan and Adrian</optionD>
+        <correct>1</correct>
+    </questions>
 
-    <question>
-        <text>Linus Benedict Torvalds is</text>
-        <options>
-            <wrongOption>Developer of the operating system Windows XP</wrongOption>
-            <correctOption>Developer of the distributed version management system Git</correctOption>
-            <wrongOption>Co-founder of payment system PayPal</wrongOption>
-            <wrongOption>A well-known hacker from the Ruhrpott</wrongOption>
-        </options>
-    </question>
-</questions>
+    <questions>
+        <text>Linus Benedict Torvalds was a ...?</text>
+        <optionA>Developer of the operating system Windows XP</optionA>
+        <optionB>Developer of the distributed version management system Git</optionB>
+        <optionC>Co-founder of payment system PayPal</optionC>
+        <optionD>A well-known hacker from the Ruhrpott</optionD>
+        <correct>2</correct>
+    </questions>
+</quiz>
 
 
