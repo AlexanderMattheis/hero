@@ -58,13 +58,18 @@ exports.clearAnswers = function() {
 
 exports.processAnswers = function () {
     const numberOfCorrectAnswers = this.currentlyCorrectAnswers.length;
+    let pointsForQuestion = 0;
 
     for (const answer of this.currentlySelectedAnswers) {
         if (this.currentlyCorrectAnswers.includes(answer)) {
-            this.pointsOfTeams[this.currentTeam] += 1 / numberOfCorrectAnswers;
+            pointsForQuestion += 1 / numberOfCorrectAnswers;
         } else {
-            this.pointsOfTeams[this.currentTeam] -= 1 / numberOfCorrectAnswers;
+            pointsForQuestion -= 1 / numberOfCorrectAnswers;
         }
+    }
+
+    if (pointsForQuestion > 0) {
+        this.pointsOfTeams[this.currentTeam] += pointsForQuestion;
     }
 };
 
