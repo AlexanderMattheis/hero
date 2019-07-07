@@ -8,28 +8,36 @@ const quiz = remote.require('./logic/business/quiz');
 // constants
 const MIN_NUMBER_OF_TEAMS = 1;
 
+// variables
+let disabledKeys = false;
+
 // enums
 const answer = {
-    A: 0,
-    B: 1,
-    C: 2,
-    D: 3
+    A: 1,
+    B: 2,
+    C: 3,
+    D: 4
 };
 
 document.addEventListener('keyup', function (event) {
     if (!quiz.ready && event.key === 'Enter') {
         quiz.ready = initGame();
     } else if (quiz.ready) {
-        if (event.key === 'a') {
+        if (event.key === 'a' && !disabledKeys) {
             selectAnswer(answer.A);
-        } else if (event.key === 'b') {
+        } else if (event.key === 'b' && !disabledKeys) {
             selectAnswer(answer.B);
-        } else if (event.key === 'c') {
+        } else if (event.key === 'c' && !disabledKeys) {
             selectAnswer(answer.C);
-        } else if (event.key === 'd') {
+        } else if (event.key === 'd' && !disabledKeys) {
             selectAnswer(answer.D);
-        } else if (event.key === 'Enter' && quiz.currentlySelectedAnswers.length > 0) {
+        } else if (event.key === 'Enter' && quiz.currentlySelectedAnswers.length > 0 && !disabledKeys) {
+            disabledKeys = true;
             quiz.processAnswers();
+            showCurrentTeamPoints();
+            deselectAnswers();
+            nextRound();
+            disabledKeys = false;
         }
     }
 });
@@ -37,7 +45,7 @@ document.addEventListener('keyup', function (event) {
 function initGame() {
     createTeams();
     createQuestionData();
-    showQuestions();
+    showQuestionsScreen();
     updateOptionsHeights();
 
     return true;
@@ -47,7 +55,7 @@ function createTeams() {
     quiz.numberOfTeams = retrieveNumberOfTeams();
 
     for (let i = 0; i < quiz.numberOfTeams; i++) {
-        quiz.pointsOfTeams.push(0);
+        quiz.setPoints(i, 0);
     }
 }
 
@@ -79,17 +87,20 @@ function retrieveQuestions(directoryPath) {
     return data;
 }
 
-function showQuestions() {
-    show(document.getElementById('question-container'));
-    let questionData = quiz.getNextQuestionData();
+function showQuestionsScreen() {
+    const questionContainer = document.getElementById('question-container');
+    const questionData = quiz.getNextQuestionData();
 
+    show(questionContainer);
     if (questionData === '') {
+        hide(questionContainer);
         // dialog: game ends here
     } else {
         const question = questionData.question;
         setElementsText(question);
         quiz.currentlyCorrectAnswers = getCorrectAnswers(question);
     }
+    showCurrentTeamPoints();
 }
 
 function setElementsText(question) {
@@ -111,8 +122,25 @@ function getCorrectAnswers(question) {
     return correctAnswers.split(',').map((item => parseInt(item)));
 }
 
+function showCurrentTeamPoints() {
+    show(document.getElementsByClassName("left-corner-points")[0]);
+    const pointsOfTheCurrentTeam = document.getElementById("current-team-points");
+    pointsOfTheCurrentTeam.innerText = quiz.pointsOfTeams[quiz.currentTeam];
+}
+
 function selectAnswer(number) {
-    quiz.selectAnswer(number);
-    const selectedAnswer = options[number];
+    quiz.addAnswer(number);
+    const selectedAnswer = options[number - 1];  // -1 since, we start counting with 1 and not 0 as JavaScript does
     changeHighlight(selectedAnswer);
 }
+
+function deselectAnswers() {
+    quiz.clearAnswers();
+    removeHighlights(options);
+}
+
+function nextRound() {
+    quiz.nextTeam();
+    showQuestionsScreen();
+}
+

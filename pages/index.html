@@ -16,6 +16,11 @@
     </head>
 
     <body>
+        <div class="left-corner-points d-none">
+            <span class="white-text pl-1">Points:</span>
+            <span id="current-team-points" class="white-text"></span>
+        </div>
+
         <div class="right-corner-zoom-bar">
             <span class="white-text pl-1">Zoom</span>
             <input type="range" min="0" value="0" max="5" step="1" id="zoom-slider" class="zoom-slider">
@@ -25,7 +30,7 @@
             <label for="num-of-teams-input" id="num-of-teams-label" class="block-align center-text white-text">
                 Number of Teams
             </label>
-            <input type="text" id="num-of-teams-input" class="center-text round-corners">
+            <input type="number" id="num-of-teams-input" class="center-text num-input round-corners" min="1" max="10" value="4">
         </div>
 
         <div id="loading-text-container" class="page-center d-none">

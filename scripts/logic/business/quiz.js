@@ -35,9 +35,7 @@ exports.getNextQuestionData = function () {
 
     if (numberOfQuestions > 0) {
         const randomNumber = randomizer.getInteger(0, numberOfQuestions);
-        selectedQuestionData = this.questionsData[randomNumber];
-
-        this.questionsData = this.questionsData.splice(randomNumber, 1);
+        selectedQuestionData = this.questionsData.splice(randomNumber, 1)[0];
     }
 
     return selectedQuestionData;
@@ -53,12 +51,29 @@ exports.addAnswer = function (number) {
     }
 };
 
-exports.processAnswers = function (callbackFunction) {
-    const numberOfCorrectAnswers = currentlyCorrectAnswers.length;
+exports.clearAnswers = function() {
+    this.currentlySelectedAnswers.length = 0;
+    this.currentlyCorrectAnswers.length = 0;
+};
 
-    for (const answer of currentlySelectedAnswers) {
+exports.processAnswers = function () {
+    const numberOfCorrectAnswers = this.currentlyCorrectAnswers.length;
+
+    for (const answer of this.currentlySelectedAnswers) {
         if (this.currentlyCorrectAnswers.includes(answer)) {
-            this.pointsOfTeams[this.currentTeam] = 1/numberOfCorrectAnswers;
+            this.pointsOfTeams[this.currentTeam] += 1 / numberOfCorrectAnswers;
+        } else {
+            this.pointsOfTeams[this.currentTeam] -= 1 / numberOfCorrectAnswers;
         }
     }
 };
+
+exports.setPoints = function (team, points) {
+    this.pointsOfTeams[team] = points;
+};
+
+exports.nextTeam = function () {
+    debugger;
+    this.currentTeam = (this.currentTeam + 1) % this.numberOfTeams;
+};
+

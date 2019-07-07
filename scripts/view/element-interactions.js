@@ -17,3 +17,14 @@ function changeHighlight(option) {
         option.classList.add('option-highlight');
     }
 }
+
+function removeHighlights(options) {
+    for (let i = 0; i < options.length; i++) {
+        const selectedAnswer = options[i];
+        removeHighlight(selectedAnswer);
+    }
+}
+
+function removeHighlight(option) {
+    option.classList.remove('option-highlight')
+}
