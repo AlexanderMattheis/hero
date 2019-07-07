@@ -1,6 +1,9 @@
 const electron = require('electron');
+const path = require('path');
 
 const remote = electron.remote;
+const BrowserWindow = remote.BrowserWindow;
+
 const paths = remote.require('./system/defaults/paths');
 const questionsLoader = remote.require('./system/io/questions-loader');
 const quiz = remote.require('./logic/business/quiz');
@@ -17,6 +20,13 @@ const answer = {
 };
 
 const numOfTeamsInput = document.getElementById("num-of-teams-input");
+
+numOfTeamsInput.onkeydown = function (event) {
+    // avoids writing in the number input, but allows using arrow keys
+    if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') {
+        event.preventDefault();
+    }
+};
 
 numOfTeamsInput.addEventListener("mousewheel", function (event) {
     // avoids parallel zooming and increasement of the number of team-members
@@ -150,5 +160,25 @@ function deselectAnswers() {
 function nextRound() {
     quiz.nextTeam();
     showQuestionsScreen();
+
+    if (quiz.numberOfTeams > 1) {
+        showStatusWindow();
+    }
 }
 
+function showStatusWindow() {
+    const modalPath = path.join('file://', __dirname, 'status.html');
+    let win = new BrowserWindow({
+        alwaysOnTop: true,
+        frame: false,
+        height: 200,
+        minHeight: 200,
+        transparent: true, width: 400,
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
+
+    win.loadURL(modalPath);
+    win.show();
+}

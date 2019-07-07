@@ -1,0 +1,46 @@
+body {
+    background: whitesmoke;
+    color: #000;
+    overflow: hidden;
+    user-select: none;
+}
+
+.answers {
+    display: inline-block;
+    width: 100px;
+}
+
+.button {
+    background-color: #AC1D25;
+    color: white;
+    font-weight: bold;
+    margin: 15px auto 0 auto;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 2px 2px #333333;
+    width: 128px;
+}
+
+.button:focus {
+    background-color: #c82029;
+    box-shadow: 0 0 10px #717171 !important;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #c82029;
+    cursor: pointer;
+}
+
+.horizontal-bar {
+    background-color: white;
+    font-size: large;
+    height: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.notices {
+    padding: 15px;
+}
+
