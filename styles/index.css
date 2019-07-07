@@ -31,12 +31,19 @@ html, body {
     width: 174px;
 }
 
+.num-input:focus::-webkit-inner-spin-button,
+.num-input:focus::-webkit-outer-spin-button {
+    opacity: 1;
+    -webkit-appearance: inner-spin-button;
+}
+
 .num-input::selection {
     background-color: white;
 }
 
 .num-input::-webkit-inner-spin-button,
 .num-input::-webkit-outer-spin-button {
+    opacity: 0;
     height: 26px;
 }
 
