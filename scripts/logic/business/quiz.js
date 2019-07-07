@@ -1,6 +1,7 @@
 const randomizer = require('../maths/randomizer');
 
 exports.ready = false;
+exports.paused = false;
 
 exports.currentTeam = 0;
 exports.numberOfTeams = 0;
@@ -78,7 +79,6 @@ exports.setPoints = function (team, points) {
 };
 
 exports.nextTeam = function () {
-    debugger;
     this.currentTeam = (this.currentTeam + 1) % this.numberOfTeams;
 };
 

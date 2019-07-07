@@ -15,7 +15,7 @@ function createWindow() {
 
     mainWindow.loadFile('pages/index.html');
     mainWindow.on('closed', () => {
-        mainWindow = null
+        mainWindow = null;
     });
 }
 

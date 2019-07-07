@@ -8,9 +8,6 @@ const paths = remote.require('./system/defaults/paths');
 const questionsLoader = remote.require('./system/io/questions-loader');
 const quiz = remote.require('./logic/business/quiz');
 
-// variables
-let disabledKeys = false;
-
 // enums
 const answer = {
     A: 1,
@@ -20,6 +17,7 @@ const answer = {
 };
 
 const numOfTeamsInput = document.getElementById("num-of-teams-input");
+const overlay = document.getElementById("main-window-overlay");
 
 numOfTeamsInput.onkeydown = function (event) {
     // avoids writing in the number input, but allows using arrow keys
@@ -37,21 +35,20 @@ document.addEventListener('keyup', function (event) {
     if (!quiz.ready && event.key === 'Enter') {
         quiz.ready = initGame();
     } else if (quiz.ready) {
-        if (event.key === 'a' && !disabledKeys) {
+        if (event.key === 'a' && !quiz.paused) {
             selectAnswer(answer.A);
-        } else if (event.key === 'b' && !disabledKeys) {
+        } else if (event.key === 'b' && !quiz.paused) {
             selectAnswer(answer.B);
-        } else if (event.key === 'c' && !disabledKeys) {
+        } else if (event.key === 'c' && !quiz.paused) {
             selectAnswer(answer.C);
-        } else if (event.key === 'd' && !disabledKeys) {
+        } else if (event.key === 'd' && !quiz.paused) {
             selectAnswer(answer.D);
-        } else if (event.key === 'Enter' && quiz.currentlySelectedAnswers.length > 0 && !disabledKeys) {
-            disabledKeys = true;
+        } else if (event.key === 'Enter' && quiz.currentlySelectedAnswers.length > 0 && !quiz.paused) {
+            quiz.paused = true;
             quiz.processAnswers();
             showCurrentTeamData();
             deselectAnswers();
             nextRound();
-            disabledKeys = false;
         }
     }
 });
@@ -157,13 +154,16 @@ function deselectAnswers() {
     removeHighlights(options);
 }
 
-function nextRound() {
+async function nextRound() {
     quiz.nextTeam();
-    showQuestionsScreen();
 
     if (quiz.numberOfTeams > 1) {
+        show(overlay);
         showStatusWindow();
     }
+
+    await until(() => quiz.paused === false);
+    showQuestionsScreen();
 }
 
 function showStatusWindow() {
@@ -172,13 +172,34 @@ function showStatusWindow() {
         alwaysOnTop: true,
         frame: false,
         height: 200,
-        minHeight: 200,
-        transparent: true, width: 400,
+        modal: true,
+        parent: remote.getCurrentWindow(),
+        resizable: true,
+        transparent: true,
+        width: 400,
         webPreferences: {
             nodeIntegration: true
         }
     });
 
+    win.on('closed', () => {
+        hide(overlay);
+        quiz.paused = false;
+        win = null;
+    });
+
     win.loadURL(modalPath);
     win.show();
+}
+
+function until(conditionFunction) {
+    const poll = resolve => {
+        if (conditionFunction()) {
+            resolve();
+        } else {
+            setTimeout(() => poll(resolve), 400);
+        }
+    };
+
+    return new Promise(poll);
 }
