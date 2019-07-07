@@ -34,7 +34,7 @@ document.addEventListener('keyup', function (event) {
         } else if (event.key === 'Enter' && quiz.currentlySelectedAnswers.length > 0 && !disabledKeys) {
             disabledKeys = true;
             quiz.processAnswers();
-            showCurrentTeamPoints();
+            showCurrentTeamData();
             deselectAnswers();
             nextRound();
             disabledKeys = false;
@@ -100,7 +100,8 @@ function showQuestionsScreen() {
         setElementsText(question);
         quiz.currentlyCorrectAnswers = getCorrectAnswers(question);
     }
-    showCurrentTeamPoints();
+
+    showCurrentTeamData();
 }
 
 function setElementsText(question) {
@@ -122,10 +123,13 @@ function getCorrectAnswers(question) {
     return correctAnswers.split(',').map((item => parseInt(item)));
 }
 
-function showCurrentTeamPoints() {
+function showCurrentTeamData() {
+    show(document.getElementsByClassName("left-corner-teams")[0]);
     show(document.getElementsByClassName("left-corner-points")[0]);
-    const pointsOfTheCurrentTeam = document.getElementById("current-team-points");
-    pointsOfTheCurrentTeam.innerText = quiz.pointsOfTeams[quiz.currentTeam];
+    const cuurrentTeam = document.getElementById("current-team");
+    const pointsOfCurrentTeam = document.getElementById("current-team-points");
+    cuurrentTeam.innerText = quiz.currentTeam;
+    pointsOfCurrentTeam.innerText = quiz.pointsOfTeams[quiz.currentTeam];
 }
 
 function selectAnswer(number) {

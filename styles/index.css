@@ -12,12 +12,17 @@ html, body {
     text-align: center;
 }
 
-.left-corner-points {
+.left-corner-teams {
     left: 20px;
     position: fixed;
     top: 10px;
 }
 
+.left-corner-points {
+    left: 120px;
+    position: fixed;
+    top: 10px;
+}
 
 .num-input {
     width: 174px;

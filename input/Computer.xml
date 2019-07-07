@@ -12,8 +12,8 @@
         <text>Linus Benedict Torvalds was a ...?</text>
         <optionA>Developer of Windows</optionA>
         <optionB>Developer of the version management system Git</optionB>
-        <optionC>Co-founder of payment system PayPal</optionC>
-        <optionD>A well-known hacker from the Ruhrpott</optionD>
+        <optionC>Co-founder of payment-system PayPal</optionC>
+        <optionD>Hacker from the Ruhrpott</optionD>
         <correct>2</correct>
     </questions>
 </quiz>
