@@ -1,10 +1,5 @@
-function getNumber(input, minNumber) {
+function getNumber(input) {
     const numberString = input.value;
-
-    if (isNaN(numberString)) {
-        return minNumber;
-    }
-
     return parseInt(numberString);
 }
 

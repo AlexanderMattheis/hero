@@ -25,13 +25,19 @@ html, body {
 }
 
 .num-input {
+    background-color: white;
+    caret-color: transparent;
+    padding-left: 15px;
     width: 174px;
+}
+
+.num-input::selection {
+    background-color: white;
 }
 
 .num-input::-webkit-inner-spin-button,
 .num-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+    height: 26px;
 }
 
 .page-center {

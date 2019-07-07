@@ -5,9 +5,6 @@ const paths = remote.require('./system/defaults/paths');
 const questionsLoader = remote.require('./system/io/questions-loader');
 const quiz = remote.require('./logic/business/quiz');
 
-// constants
-const MIN_NUMBER_OF_TEAMS = 1;
-
 // variables
 let disabledKeys = false;
 
@@ -18,6 +15,13 @@ const answer = {
     C: 3,
     D: 4
 };
+
+const numOfTeamsInput = document.getElementById("num-of-teams-input");
+
+numOfTeamsInput.addEventListener("mousewheel", function (event) {
+    // avoids parallel zooming and increasement of the number of team-members
+    event.preventDefault();
+});
 
 document.addEventListener('keyup', function (event) {
     if (!quiz.ready && event.key === 'Enter') {
@@ -62,7 +66,7 @@ function createTeams() {
 function retrieveNumberOfTeams() {
     function getNumberOfTeams() {
         const numOfTeamsInput = document.getElementById("num-of-teams-input");
-        return getNumber(numOfTeamsInput, MIN_NUMBER_OF_TEAMS);
+        return getNumber(numOfTeamsInput);
     }
 
     const numOfTeamsContainer = document.getElementById("num-of-teams-container");
@@ -128,7 +132,7 @@ function showCurrentTeamData() {
     show(document.getElementsByClassName("left-corner-points")[0]);
     const cuurrentTeam = document.getElementById("current-team");
     const pointsOfCurrentTeam = document.getElementById("current-team-points");
-    cuurrentTeam.innerText = quiz.currentTeam;
+    cuurrentTeam.innerText = quiz.currentTeam + 1;
     pointsOfCurrentTeam.innerText = quiz.pointsOfTeams[quiz.currentTeam];
 }
 
