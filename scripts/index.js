@@ -36,7 +36,6 @@ document.addEventListener('keyup', function (event) {
         } else if (event.key === 'd' && !quiz.paused) {
             selectAnswer(quiz.answerTypes.D);
         } else if (event.key === 'Enter' && quiz.currentlySelectedAnswers.length > 0 && !quiz.paused) {
-            quiz.paused = true;
             quiz.processAnswers();
             showCurrentTeamData();
             nextRound();
@@ -95,7 +94,6 @@ function showQuestionsScreen() {
     const questionContainer = document.getElementById('question-container');
     const questionData = quiz.getNextQuestionData();
 
-    debugger;
     show(questionContainer);
     // in a certain round the quiz should end to ensure that each team gets the same amount of questions
     if (questionData === '' || quiz.currentRound > quiz.lastRound) {
@@ -150,12 +148,16 @@ function deselectAnswers() {
 }
 
 async function nextRound() {
-    if (quiz.numberOfTeams > 1) {
+    if (quiz.numberOfTeams > 1 || quiz.givenWrongAnswer) {
+        // pausing is only necessary in a multiplayer game to show the status
+        quiz.paused = true;
+
         show(overlay);
         showStatusWindow();
     }
 
-    await until(() => quiz.paused === false);  // a function to check the quiz state
+    // a function to check the quiz state
+    await until(() => quiz.paused === false);
 
     quiz.currentRound++;
     quiz.nextTeam();

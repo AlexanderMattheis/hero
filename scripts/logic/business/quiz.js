@@ -19,7 +19,7 @@ exports.pointsOfTeams = [];
 exports.questionsData = [];
 exports.currentRound = 1;
 exports.lastRound = -1;
-
+exports.givenWrongAnswer = false;
 
 exports.createProbsEqualizedQuestionData = function (metaDataAndQuestions) {
     const files = metaDataAndQuestions.files;
@@ -66,6 +66,9 @@ exports.addAnswer = function (number) {
 exports.clearAnswers = function() {
     this.currentlySelectedAnswers.length = 0;
     this.currentlyCorrectAnswers.length = 0;
+
+    this.givenWrongAnswer = false;
+    this.earnedPointsNumber = 0;
 };
 
 exports.processAnswers = function () {
@@ -77,6 +80,7 @@ exports.processAnswers = function () {
             pointsForQuestion += 1 / numberOfCorrectAnswers;
         } else {
             pointsForQuestion -= 1 / numberOfCorrectAnswers;
+            this.givenWrongAnswer = true;
         }
     }
 
