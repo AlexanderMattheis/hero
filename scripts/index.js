@@ -45,15 +45,17 @@ document.addEventListener('keyup', function (event) {
 });
 
 function initGame() {
-    createTeams();
+    createTeamData();
     createQuestionData();
+    quiz.lastRound = quiz.getLastRound(quiz.numberOfTeams, quiz.questionsData.length); // to ensure each team gets the same amount of questions
+
     showQuestionsScreen();
     updateOptionsHeights();
 
     return true;
 }
 
-function createTeams() {
+function createTeamData() {
     quiz.numberOfTeams = retrieveNumberOfTeams();
 
     for (let i = 0; i < quiz.numberOfTeams; i++) {
@@ -93,10 +95,12 @@ function showQuestionsScreen() {
     const questionContainer = document.getElementById('question-container');
     const questionData = quiz.getNextQuestionData();
 
+    debugger;
     show(questionContainer);
-    if (questionData === '') {
+    // in a certain round the quiz should end to ensure that each team gets the same amount of questions
+    if (questionData === '' || quiz.currentRound > quiz.lastRound) {
         hide(questionContainer);
-        // dialog: game ends here
+
     } else {
         const question = questionData.question;
         setElementsText(question);
@@ -136,7 +140,7 @@ function showCurrentTeamData() {
 
 function selectAnswer(number) {
     quiz.addAnswer(number);
-    const selectedAnswer = options[number - 1];  // -1 since, we start counting with 1 and not 0 as JavaScript does
+    const selectedAnswer = options[number - 1];  // -1, since started counting with 1 and not 0 as JavaScript does
     changeHighlight(selectedAnswer);
 }
 
@@ -146,14 +150,15 @@ function deselectAnswers() {
 }
 
 async function nextRound() {
-    quiz.nextTeam();
-
     if (quiz.numberOfTeams > 1) {
         show(overlay);
         showStatusWindow();
     }
 
     await until(() => quiz.paused === false);  // a function to check the quiz state
+
+    quiz.currentRound++;
+    quiz.nextTeam();
     deselectAnswers();
     showQuestionsScreen();
 }

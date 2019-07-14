@@ -16,6 +16,76 @@
         <optionD>Hacker from the Ruhrpott</optionD>
         <correct>2</correct>
     </questions>
+
+    <questions>
+        <text>When the support for Windows XP Service Pack 3 has been canceled?</text>
+        <optionA>December 31, 2012</optionA>
+        <optionB>April 8th, 2014</optionB>
+        <optionC>1st March 2009</optionC>
+        <optionD>April 11th, 2017</optionD>
+        <correct>2</correct>
+    </questions>
+
+    <questions>
+        <text>Who initiated the Ubuntu project?</text>
+        <optionA>A German software developer</optionA>
+        <optionB>Business owner Elon Reeve Musk</optionB>
+        <optionC>A south African multimillionaire</optionC>
+        <optionD>An US computer scientist</optionD>
+        <correct>3</correct>
+    </questions>
+
+    <questions>
+        <text>When Windows 1.0 has been released? In the same year as the movie...?</text>
+        <optionA>Back to the future</optionA>
+        <optionB>Back to the future II</optionB>
+        <optionC>Back to the future III</optionC>
+        <optionD>Back to the future IV</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>Timothy Berner-Lee?</text>
+        <optionA>Plays a character  in "MIB"-movies</optionA>
+        <optionB>Founded the World Wide Web</optionB>
+        <optionC>Is a martial arts legend</optionC>
+        <optionD>Namesake for leeward side</optionD>
+        <correct>2</correct>
+    </questions>
+
+    <questions>
+        <text>How many root name servers were there worldwide in 2018?</text>
+        <optionA>7</optionA>
+        <optionB>42</optionB>
+        <optionC>1001</optionC>
+        <optionD>13</optionD>
+        <correct>4</correct>
+    </questions>
+
+    <questions>
+        <text>1 Kibibyte are…?</text>
+        <optionA>1000 Byte</optionA>
+        <optionB>2 Byte</optionB>
+        <optionC>1024 Byte</optionC>
+        <optionD>16 Byte</optionD>
+        <correct>3</correct>
+    </questions>
+
+    <questions>
+        <text>What does the abbreviation IBM stand for?</text>
+        <optionA>Intelligence, Business and Manufacturing</optionA>
+        <optionB>Indian Business Men</optionB>
+        <optionC>Integrated Board Manufacturer</optionC>
+        <optionD>International Business Machines</optionD>
+        <correct>4</correct>
+    </questions>
+
+    <questions>
+        <text>Who is considered to be the discoverer of the Pentium Bug from 1994?</text>
+        <optionA>Thomas Ray Nicely</optionA>
+        <optionB>Kevin David Mitnick</optionB>
+        <optionC>Bernd Becker</optionC>
+        <optionD>Petra Müller</optionD>
+        <correct>4</correct>
+    </questions>
 </quiz>
-
-

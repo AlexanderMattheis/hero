@@ -17,6 +17,8 @@ exports.earnedPointsNumber = 0;
 exports.numberOfTeams = 0;
 exports.pointsOfTeams = [];
 exports.questionsData = [];
+exports.currentRound = 1;
+exports.lastRound = -1;
 
 
 exports.createProbsEqualizedQuestionData = function (metaDataAndQuestions) {
@@ -90,5 +92,9 @@ exports.setPoints = function (team, points) {
 
 exports.nextTeam = function () {
     this.currentTeam = (this.currentTeam + 1) % this.numberOfTeams;
+};
+
+exports.getLastRound = function (numberOfTeams, numberOfQuestions) {
+    return parseInt( numberOfQuestions / numberOfTeams) * numberOfTeams;
 };
 
