@@ -1,9 +1,20 @@
-const {app, BrowserWindow} = require('electron');
+const electron = require('electron');
 
-let mainWindow;
+const app = electron.app;
+const ipc = electron.ipcMain;  // Inter-Process Communication
 
-function createWindow() {
-    mainWindow = new BrowserWindow({
+const BrowserWindow = electron.BrowserWindow;
+
+let indexWindow;
+let statusWindow;
+
+function initWindows() {
+    createIndexWindow();
+    createStatusWindow();
+}
+
+function createIndexWindow() {
+    indexWindow = new BrowserWindow({
         height: 720,
         minHeight: 720,
         minWidth: 1280,
@@ -13,10 +24,38 @@ function createWindow() {
         }
     });
 
-    mainWindow.loadFile('pages/index.html');
-    mainWindow.on('closed', () => {
-        mainWindow = null;
+    indexWindow.loadFile('pages/index.html');
+    indexWindow.on('closed', () => {
+        indexWindow = null;
     });
 }
 
-app.on('ready', createWindow);
+function createStatusWindow() {
+    statusWindow = new BrowserWindow({
+        alwaysOnTop: true,
+        frame: false,
+        height: 200,
+        modal: true,
+        parent: indexWindow,
+        resizable: true,
+        show: false,
+        transparent: true,
+        width: 400,
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
+
+    statusWindow.loadFile('pages/status.html');
+    statusWindow.on('hide', () => {
+        indexWindow.focus();  // or the keyboard won't work
+        indexWindow.webContents.send('continue-quiz');
+    });
+}
+
+app.on('ready', initWindows);
+
+ipc.on('show-status-window', function (event, quiz) {
+    statusWindow.webContents.send('set-team-data', quiz);
+    statusWindow.show();
+});

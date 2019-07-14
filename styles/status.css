@@ -32,6 +32,11 @@ body {
     cursor: pointer;
 }
 
+.certain-width {
+    display: inline-block;
+    width: 150px;
+}
+
 .horizontal-bar {
     background-color: white;
     font-size: large;

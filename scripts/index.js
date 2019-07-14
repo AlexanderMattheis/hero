@@ -1,20 +1,12 @@
 const electron = require('electron');
 const path = require('path');
 
+const ipcRenderer = electron.ipcRenderer;  // to send messages to the main-process and receive replies from it
 const remote = electron.remote;
-const BrowserWindow = remote.BrowserWindow;
 
 const paths = remote.require('./system/defaults/paths');
 const questionsLoader = remote.require('./system/io/questions-loader');
 const quiz = remote.require('./logic/business/quiz');
-
-// enums
-const answer = {
-    A: 1,
-    B: 2,
-    C: 3,
-    D: 4
-};
 
 const numOfTeamsInput = document.getElementById("num-of-teams-input");
 const overlay = document.getElementById("main-window-overlay");
@@ -36,18 +28,17 @@ document.addEventListener('keyup', function (event) {
         quiz.ready = initGame();
     } else if (quiz.ready) {
         if (event.key === 'a' && !quiz.paused) {
-            selectAnswer(answer.A);
+            selectAnswer(quiz.answerTypes.A);
         } else if (event.key === 'b' && !quiz.paused) {
-            selectAnswer(answer.B);
+            selectAnswer(quiz.answerTypes.B);
         } else if (event.key === 'c' && !quiz.paused) {
-            selectAnswer(answer.C);
+            selectAnswer(quiz.answerTypes.C);
         } else if (event.key === 'd' && !quiz.paused) {
-            selectAnswer(answer.D);
+            selectAnswer(quiz.answerTypes.D);
         } else if (event.key === 'Enter' && quiz.currentlySelectedAnswers.length > 0 && !quiz.paused) {
             quiz.paused = true;
             quiz.processAnswers();
             showCurrentTeamData();
-            deselectAnswers();
             nextRound();
         }
     }
@@ -162,41 +153,24 @@ async function nextRound() {
         showStatusWindow();
     }
 
-    await until(() => quiz.paused === false);
+    await until(() => quiz.paused === false);  // a function to check the quiz state
+    deselectAnswers();
     showQuestionsScreen();
 }
 
 function showStatusWindow() {
-    const modalPath = path.join('file://', __dirname, 'status.html');
-    let win = new BrowserWindow({
-        alwaysOnTop: true,
-        frame: false,
-        height: 200,
-        modal: true,
-        parent: remote.getCurrentWindow(),
-        resizable: true,
-        transparent: true,
-        width: 400,
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-
-    win.on('closed', () => {
-        hide(overlay);
+    ipcRenderer.send('show-status-window', quiz);
+    ipcRenderer.on('continue-quiz', () => {
         quiz.paused = false;
-        win = null;
+        hide(overlay);
     });
-
-    win.loadURL(modalPath);
-    win.show();
 }
 
 function until(conditionFunction) {
     const poll = resolve => {
         if (conditionFunction()) {
             resolve();
-        } else {
+        } else {  // if state haven't changed, the function is checked after 400ms again
             setTimeout(() => poll(resolve), 400);
         }
     };

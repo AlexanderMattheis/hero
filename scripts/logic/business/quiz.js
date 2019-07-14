@@ -1,14 +1,23 @@
 const randomizer = require('../maths/randomizer');
 
+exports.answerTypes = {
+    A: 1,
+    B: 2,
+    C: 3,
+    D: 4
+};
+
 exports.ready = false;
 exports.paused = false;
 
-exports.currentTeam = 0;
-exports.numberOfTeams = 0;
-exports.questionsData = [];
-exports.currentlySelectedAnswers = [];
 exports.currentlyCorrectAnswers = [];
+exports.currentlySelectedAnswers = [];
+exports.currentTeam = 0;
+exports.earnedPointsNumber = 0;
+exports.numberOfTeams = 0;
 exports.pointsOfTeams = [];
+exports.questionsData = [];
+
 
 exports.createProbsEqualizedQuestionData = function (metaDataAndQuestions) {
     const files = metaDataAndQuestions.files;
@@ -61,8 +70,8 @@ exports.processAnswers = function () {
     const numberOfCorrectAnswers = this.currentlyCorrectAnswers.length;
     let pointsForQuestion = 0;
 
-    for (const answer of this.currentlySelectedAnswers) {
-        if (this.currentlyCorrectAnswers.includes(answer)) {
+    for (const answerNumber of this.currentlySelectedAnswers) {
+        if (this.currentlyCorrectAnswers.includes(answerNumber)) {
             pointsForQuestion += 1 / numberOfCorrectAnswers;
         } else {
             pointsForQuestion -= 1 / numberOfCorrectAnswers;
@@ -71,6 +80,7 @@ exports.processAnswers = function () {
 
     if (pointsForQuestion > 0) {
         this.pointsOfTeams[this.currentTeam] += pointsForQuestion;
+        this.earnedPointsNumber = pointsForQuestion;
     }
 };
 
