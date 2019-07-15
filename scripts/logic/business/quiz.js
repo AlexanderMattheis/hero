@@ -63,7 +63,7 @@ exports.addAnswer = function (number) {
     }
 };
 
-exports.clearAnswers = function() {
+exports.clearAnswers = function () {
     this.currentlySelectedAnswers.length = 0;
     this.currentlyCorrectAnswers.length = 0;
 
@@ -99,6 +99,22 @@ exports.nextTeam = function () {
 };
 
 exports.getLastRound = function (numberOfTeams, numberOfQuestions) {
-    return parseInt( numberOfQuestions / numberOfTeams) * numberOfTeams;
+    return parseInt(numberOfQuestions / numberOfTeams) * numberOfTeams;
+};
+
+exports.selectWinnerTeamData = function () {
+    let maxPointsIndex = -1;
+    let maxPoints = Number.NEGATIVE_INFINITY;
+
+    let index = 0;
+    for (const pointsNumber of this.pointsOfTeams) {
+        if (pointsNumber > maxPoints) {
+            maxPointsIndex = index;
+            maxPoints = pointsNumber;
+        }
+        index++;
+    }
+
+    return {team: maxPointsIndex + 1, points: maxPoints};
 };
 

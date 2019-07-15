@@ -48,7 +48,7 @@ function initGame() {
     createQuestionData();
     quiz.lastRound = quiz.getLastRound(quiz.numberOfTeams, quiz.questionsData.length); // to ensure each team gets the same amount of questions
 
-    showQuestionsScreen();
+    showNextQuestions();
     updateOptionsHeights();
 
     return true;
@@ -90,7 +90,7 @@ function retrieveQuestions(directoryPath) {
     return data;
 }
 
-function showQuestionsScreen() {
+function showNextQuestions() {
     const questionContainer = document.getElementById('question-container');
     const questionData = quiz.getNextQuestionData();
 
@@ -98,14 +98,30 @@ function showQuestionsScreen() {
     // in a certain round the quiz should end to ensure that each team gets the same amount of questions
     if (questionData === '' || quiz.currentRound > quiz.lastRound) {
         hide(questionContainer);
-
+        hideAllDisplays();
+        showWinnerWindow();
+        quiz.paused = true;
     } else {
         const question = questionData.question;
         setElementsText(question);
         quiz.currentlyCorrectAnswers = getCorrectAnswers(question);
     }
 
-    showCurrentTeamData();
+    if (!quiz.paused) {
+        showCurrentTeamData();
+    }
+}
+
+function hideAllDisplays() {
+    const teamsContainer = document.getElementById('teams-container');
+    const pointsContainer = document.getElementById('points-container');
+
+    hide(teamsContainer);
+    hide(pointsContainer);
+}
+
+function showWinnerWindow() {
+    const winnerTeamData = quiz.selectWinnerTeamData();
 }
 
 function setElementsText(question) {
@@ -128,11 +144,11 @@ function getCorrectAnswers(question) {
 }
 
 function showCurrentTeamData() {
-    show(document.getElementsByClassName("left-corner-teams")[0]);
-    show(document.getElementsByClassName("left-corner-points")[0]);
-    const cuurrentTeam = document.getElementById("current-team");
+    show(document.getElementById("teams-container"));
+    show(document.getElementById("points-container"));
+    const currentTeam = document.getElementById("current-team");
     const pointsOfCurrentTeam = document.getElementById("current-team-points");
-    cuurrentTeam.innerText = quiz.currentTeam + 1;
+    currentTeam.innerText = quiz.currentTeam + 1;
     pointsOfCurrentTeam.innerText = quiz.pointsOfTeams[quiz.currentTeam];
 }
 
@@ -149,7 +165,7 @@ function deselectAnswers() {
 
 async function nextRound() {
     if (quiz.numberOfTeams > 1 || quiz.givenWrongAnswer) {
-        // pausing is only necessary in a multiplayer game to show the status
+        // pausing is only necessary in a multiplayer game to show the status or in case of a wrong answer
         quiz.paused = true;
 
         show(overlay);
@@ -162,7 +178,7 @@ async function nextRound() {
     quiz.currentRound++;
     quiz.nextTeam();
     deselectAnswers();
-    showQuestionsScreen();
+    showNextQuestions();
 }
 
 function showStatusWindow() {
