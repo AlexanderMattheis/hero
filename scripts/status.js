@@ -4,6 +4,7 @@ const ipcRenderer = electron.ipcRenderer;  // to send messages to the main-proce
 const remote = electron.remote;
 
 // elements
+const statusContainer = document.getElementById('status-container');
 const earnedPoints = document.getElementById('earned-points');
 
 const correctAnswersLabel = document.getElementById('correct-answers-label');
@@ -13,9 +14,10 @@ const teamAnswersLabel = document.getElementById('team-answers-label');
 const teamAnswers = document.getElementById('team-answers');
 
 const nextTeamButton = document.getElementById('next-team-button');
-nextTeamButton.focus();
 
 ipcRenderer.on('set-team-data', (event, quiz) => {
+    nextTeamButton.focus();
+
     earnedPoints.innerText = quiz.earnedPointsNumber === 1
         ? quiz.earnedPointsNumber + ' point'
         : quiz.earnedPointsNumber + ' points';
@@ -53,6 +55,27 @@ function getAnswersString(answerTypes, answers) {
     return convertedAnswers.sort().join(', ');
 }
 
+const winnersContainer = document.getElementById('winners-container');
+
+const winnersLabel = document.getElementById('winners-label');
+const winners = document.getElementById('winners');
+
+const points = document.getElementById('points');
+
+const restartTeamButton = document.getElementById('restart-game-button');
+
+ipcRenderer.on('set-winners-data', (event, winnersTeamData) => {
+    hide(statusContainer);
+    show(winnersContainer);
+
+    const onlyOneTeam = winnersTeamData.teams.length === 1;
+
+    winnersLabel.innerText = (onlyOneTeam ? 'Winner-Team' : 'Winner-Teams') + ':';
+    winners.innerText = winnersTeamData.teams.join(", ");
+
+    points.innerText = winnersTeamData.points;
+});
+
 nextTeamButton.addEventListener('click', function () {
     const window = remote.getCurrentWindow();
     window.hide();
@@ -62,5 +85,17 @@ nextTeamButton.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
         const window = remote.getCurrentWindow();
         window.hide();
+    }
+});
+
+restartTeamButton.addEventListener('click', function () {
+    remote.app.relaunch();
+    remote.app.quit();
+});
+
+restartTeamButton.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        remote.app.relaunch();
+        remote.app.quit();
     }
 });

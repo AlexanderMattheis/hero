@@ -5,11 +5,6 @@ body {
     user-select: none;
 }
 
-.answers {
-    display: inline-block;
-    width: 100px;
-}
-
 .button {
     background-color: #AC1D25;
     color: white;
@@ -43,6 +38,11 @@ body {
     height: 30px;
     margin-top: 20px;
     text-align: center;
+}
+
+.inline-certain-width {
+    display: inline-block;
+    width: 100px;
 }
 
 .notices {

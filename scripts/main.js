@@ -59,3 +59,8 @@ ipc.on('show-status-window', function (event, quiz) {
     statusWindow.webContents.send('set-team-data', quiz);
     statusWindow.show();
 });
+
+ipc.on('show-winner-window', function (event, winnersTeamData) {
+    statusWindow.webContents.send('set-winners-data', winnersTeamData);
+    statusWindow.show();
+});

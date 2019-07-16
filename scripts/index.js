@@ -97,8 +97,7 @@ function showNextQuestions() {
     show(questionContainer);
     // in a certain round the quiz should end to ensure that each team gets the same amount of questions
     if (questionData === '' || quiz.currentRound > quiz.lastRound) {
-        hide(questionContainer);
-        hideAllDisplays();
+        show(overlay);
         showWinnerWindow();
         quiz.paused = true;
     } else {
@@ -112,16 +111,9 @@ function showNextQuestions() {
     }
 }
 
-function hideAllDisplays() {
-    const teamsContainer = document.getElementById('teams-container');
-    const pointsContainer = document.getElementById('points-container');
-
-    hide(teamsContainer);
-    hide(pointsContainer);
-}
-
 function showWinnerWindow() {
-    const winnerTeamData = quiz.selectWinnerTeamData();
+    const winnersTeamData = quiz.selectWinnerTeamData();
+    ipcRenderer.send('show-winner-window', winnersTeamData);
 }
 
 function setElementsText(question) {

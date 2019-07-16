@@ -8,19 +8,40 @@
     <link rel="stylesheet" href="../styles/status.css">
 </head>
 <body>
-    <div class="horizontal-bar">
-        <b>You earned <span id="earned-points"></span>!</b>
+    <div id="status-container">
+        <div class="horizontal-bar">
+            <b>You earned <span id="earned-points"></span>!</b>
+        </div>
+
+        <div class="notices">
+            <span class="certain-width font-weight-bold" id="correct-answers-label"></span> <div id="correct-answers" class="inline-certain-width"></div>
+            <br>
+            <span class="certain-width font-weight-bold" id="team-answers-label"></span> <div id="team-answers" class="inline-certain-width"></div>
+        </div>
+
+        <div id="next-team-button" class="button" tabindex="0">
+            <b>Next Round</b>
+        </div>
     </div>
 
-    <div class="notices">
-        <span class="certain-width font-weight-bold" id="correct-answers-label"></span> <div id="correct-answers" class="answers"></div>
-        <br>
-        <span class="certain-width font-weight-bold" id="team-answers-label"></span> <div id="team-answers" class="answers"></div>
+    <div id="winners-container" class="d-none">
+        <div class="horizontal-bar">
+            <b>Congratulation!</b>
+        </div>
+
+        <div class="notices">
+            <span class="certain-width font-weight-bold" id="winners-label"></span> <div id="winners" class="inline-certain-width"></div>
+            <br>
+            <span class="certain-width font-weight-bold">Points:</span> <div id="points" class="inline-certain-width"></div>
+        </div>
+
+        <div id="restart-game-button" class="button" tabindex="0">
+            <b>Restart</b>
+        </div>
     </div>
 
-    <div id="next-team-button" class="button" tabindex="0">
-        <b>Next Round</b>
-    </div>
+    <!-- BASICS -->
+    <script src="../scripts/view/element-interactions.js"></script>
 
     <script src="../scripts/status.js"></script>
 </body>

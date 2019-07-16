@@ -103,18 +103,25 @@ exports.getLastRound = function (numberOfTeams, numberOfQuestions) {
 };
 
 exports.selectWinnerTeamData = function () {
-    let maxPointsIndex = -1;
+    let maxPointsIndizes = [];
     let maxPoints = Number.NEGATIVE_INFINITY;
 
-    let index = 0;
+    // find maximum
     for (const pointsNumber of this.pointsOfTeams) {
         if (pointsNumber > maxPoints) {
-            maxPointsIndex = index;
             maxPoints = pointsNumber;
         }
-        index++;
     }
 
-    return {team: maxPointsIndex + 1, points: maxPoints};
+    // select all teams with the maximum number
+    let index = 0;
+    for (const pointsNumber of this.pointsOfTeams) {
+        index++;
+        if (pointsNumber === maxPoints) {
+            maxPointsIndizes.push(index)
+        }
+    }
+
+    return {teams: maxPointsIndizes, points: maxPoints};
 };
 
