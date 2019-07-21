@@ -3,14 +3,16 @@
   "version": "2019.6.11",
   "main": "scripts/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-win": "electron-packager . hero --overwrite --icon=hero.ico --out=release-builds"
   },
   "devDependencies": {
-    "bootstrap": "^4.3.1",
     "electron": "^5.0.3"
   },
   "dependencies": {
-    "jquery": "^1.9.1",
+    "bootstrap": "^4.3.1",
+    "electron-packager": "^14.0.2",
+    "jquery": "^3.4.1",
     "xml2js": "^0.4.19"
   },
   "author": "Alexander Mattheis",

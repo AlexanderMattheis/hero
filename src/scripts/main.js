@@ -15,6 +15,7 @@ function initWindows() {
 
 function createIndexWindow() {
     indexWindow = new BrowserWindow({
+        frame: false,
         height: 720,
         icon:'hero.ico',
         minHeight: 720,

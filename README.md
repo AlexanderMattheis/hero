@@ -39,10 +39,10 @@ To enlarge the texts of the main screen, you can use the slider on the top right
 \* read [Known Issues](#known-issues)
 
 ### Status Window
-In multiplayer, after answering a question, a status window will appear, showing the number of points collected for a question. The status window will also be displayed if a question has been answered incorrectly in singleplayer mode. At the end of the game, the status window shows the winning teams with their number of collected points and a button to restart the game.
+In multiplayer, after answering a question, a status window will appear, showing the number of points earned for a question. The status window will also be displayed if a question has been answered incorrectly in singleplayer mode. At the end of the game, the status window shows the winning teams with their number of collected points and a button to restart the game.
 
 ## Known Issues
 #### Taskbar Appears in Fullscreen Mode 
-On Microsoft Windows 10, the taskbar gets displayed in fullscreen mode when the ingame status window gets enabled. To solve the problem, right-click on the Windows taskbar and select "Taskbar Settings". Activate the option `` Automatically hide the taskbar in desktop mode``.
+On Microsoft Windows 10, the taskbar gets displayed in fullscreen mode when the ingame status window gets enabled. To solve the problem, right-click on the Windows taskbar and select ``Taskbar Settings``. Activate the option `` Automatically hide the taskbar in desktop mode``.
 
 <img src="https://github.com/AlexanderMattheis/hero/blob/master/pics/activate_auto_hide_in_desktop_mode.PNG" width="800" height="625">
