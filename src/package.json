@@ -13,9 +13,9 @@
     "jquery": "^1.9.1",
     "xml2js": "^0.4.19"
   },
-  "author": "Alexander Mattheis et al.",
+  "author": "Alexander Mattheis",
   "license": "Unlicense",
-  "description": "An app to create multiplayer quiz.",
+  "description": "A multiplayer quiz application",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexanderMattheis/hero.git"
