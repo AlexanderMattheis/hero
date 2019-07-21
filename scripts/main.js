@@ -25,6 +25,7 @@ function createIndexWindow() {
     });
 
     indexWindow.loadFile('pages/index.html');
+    indexWindow.setMenu(null);
     indexWindow.on('closed', () => {
         indexWindow = null;
     });
@@ -32,14 +33,12 @@ function createIndexWindow() {
 
 function createStatusWindow() {
     statusWindow = new BrowserWindow({
-        alwaysOnTop: true,
         frame: false,
         height: 200,
         modal: true,
         parent: indexWindow,
-        resizable: true,
+        resizable: false,
         show: false,
-        transparent: true,
         width: 400,
         webPreferences: {
             nodeIntegration: true
@@ -47,6 +46,7 @@ function createStatusWindow() {
     });
 
     statusWindow.loadFile('pages/status.html');
+    statusWindow.setMenu(null);
     statusWindow.on('hide', () => {
         indexWindow.focus();  // or the keyboard won't work
         indexWindow.webContents.send('continue-quiz');

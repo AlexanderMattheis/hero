@@ -1,5 +1,4 @@
 const electron = require('electron');
-const path = require('path');
 
 const ipcRenderer = electron.ipcRenderer;  // to send messages to the main-process and receive replies from it
 const remote = electron.remote;
@@ -8,10 +7,21 @@ const paths = remote.require('./system/defaults/paths');
 const questionsLoader = remote.require('./system/io/questions-loader');
 const quiz = remote.require('./logic/business/quiz');
 
+// elements
+const currentWindow = electron.remote.getCurrentWindow();
+let fullscreen = false;
+
+window.addEventListener('keyup', function(event) {
+    if (event.key === 'F11') {
+        fullscreen = !fullscreen;
+        currentWindow.setFullScreen(fullscreen);
+    }
+});
+
 const numOfTeamsInput = document.getElementById("num-of-teams-input");
 const overlay = document.getElementById("main-window-overlay");
 
-numOfTeamsInput.onkeydown = function (event) {
+numOfTeamsInput.onkeydown = function(event) {
     // avoids writing in the number input, but allows using arrow keys
     if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') {
         event.preventDefault();
