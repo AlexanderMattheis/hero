@@ -1,16 +1,18 @@
 {
-  "name": "Hero",
-  "version": "2019.6.11",
+  "name": "hero",
+  "version": "1.0.0",
   "main": "scripts/main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . hero --overwrite --icon=hero.ico --out=release-builds"
+    "package": "electron-packager . hero --overwrite --icon=hero.ico --out=release-builds",
+    "create-debian": "electron-installer-debian --src release-builds/hero-linux-x64 --arch amd64 --config debian.json"
   },
   "devDependencies": {
     "electron": "^5.0.3"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "electron-installer-debian": "^2.0.0",
     "electron-packager": "^14.0.2",
     "jquery": "^3.4.1",
     "xml2js": "^0.4.19"
@@ -18,6 +20,7 @@
   "author": "Alexander Mattheis",
   "license": "Unlicense",
   "description": "A multiplayer quiz application",
+  "productDescription": "You like quiz shows like \"Who Wants to be a Millionaire\"? If the correct answer is 'yes' and you want to play a similar game, you're in the right place. Hero is a game that you can play against others or in singleplayer mode.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexanderMattheis/hero.git"
