@@ -4,15 +4,14 @@
   "main": "scripts/main.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . hero --overwrite --icon=hero.ico --out=release-builds",
-    "create-debian": "electron-installer-debian --src release-builds/hero-linux-x64 --arch amd64 --config debian.json"
+    "package-win": "electron-packager . hero --overwrite --icon=hero.ico --out=release-builds",
+    "package-lin": "electron-packager . hero --overwrite --icon=hero.png --out=release-builds"
   },
   "devDependencies": {
     "electron": "^5.0.3"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "electron-installer-debian": "^2.0.0",
     "electron-packager": "^14.0.2",
     "jquery": "^3.4.1",
     "xml2js": "^0.4.19"
