@@ -1,0 +1,82 @@
+<quiz>
+    <questions>
+        <text>Age of Empires was developed by ...?</text>
+        <optionA>Blue Byte</optionA>
+        <optionB>Ensemble Studios</optionB>
+        <optionC>Crytek</optionC>
+        <optionD>Infinity Ward</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>The first Need for Speed was first published ...</text>
+        <optionA>1994</optionA>
+        <optionB>2004</optionB>
+        <optionC>2000</optionC>
+        <optionD>1997</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>The Japanese and Professor Tōru Iwatani created ...</text>
+        <optionA>specification for Snake</optionA>
+        <optionB>specification for Super Mario</optionB>
+        <optionC>specification for PAC-MAN</optionC>
+        <optionD>specification for Donkey Kong</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>Under which name was PAC-MAN published in Japan?</text>
+        <optionA>PUCK MAN</optionA>
+        <optionB>CLIC CLAC</optionB>
+        <optionC>PAC-MAN</optionC>
+        <optionD>MEGAMAN</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>Which of these games was released in 1979?</text>
+        <optionA>Galaga</optionA>
+        <optionB>SPACE INVADERS</optionB>
+        <optionC>PAC-MAN</optionC>
+        <optionD>ASTEROIDS</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>Which of these game consoles was released in 1989?</text>
+        <optionA>NES</optionA>
+        <optionB>Game Boy</optionB>
+        <optionC>Atari</optionC>
+        <optionD>Sega Mega Drive</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>Where does Super Mario come from, according to the movie released in 1993?</text>
+        <optionA>Brooklyn, New York</optionA>
+        <optionB>Castello, Venedig</optionB>
+        <optionC>Trastevere, Rom</optionC>
+        <optionD>Parkville, Melbourne</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>The Yellow Edition of Pokémon has been released</text>
+        <optionA>1996</optionA>
+        <optionB>1997</optionB>
+        <optionC>1998</optionC>
+        <optionD>1999</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>Markus Alexej Persson is ...</text>
+        <optionA>The CEO of AMD</optionA>
+        <optionB>Co-developer of the game Space Invaders</optionB>
+        <optionC>Chief developer for Nvidia RTX graphics</optionC>
+        <optionD>Former chief developer of Minecraft</optionD>
+        <correct>4</correct>
+    </questions>
+</quiz>

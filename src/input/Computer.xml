@@ -36,7 +36,7 @@
     </questions>
 
     <questions>
-        <text>When Windows 1.0 has been released? In the same year as the movie...?</text>
+        <text>When Windows 1.0 has been released? In the same year as the movie ...?</text>
         <optionA>Back to the future</optionA>
         <optionB>Back to the future II</optionB>
         <optionC>Back to the future III</optionC>
@@ -63,7 +63,7 @@
     </questions>
 
     <questions>
-        <text>1 Kibibyte are…?</text>
+        <text>1 Kibibyte are ...?</text>
         <optionA>1000 Byte</optionA>
         <optionB>2 Byte</optionB>
         <optionC>1024 Byte</optionC>
@@ -84,8 +84,170 @@
         <text>Who is considered to be the discoverer of the Pentium Bug from 1994?</text>
         <optionA>Thomas Ray Nicely</optionA>
         <optionB>Kevin David Mitnick</optionB>
-        <optionC>Bernd Becker</optionC>
+        <optionC>Paul Kocher</optionC>
         <optionD>Petra Müller</optionD>
         <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What is so special about the Linux Mint codenames?</text>
+        <optionA>Character names from Toy Story</optionA>
+        <optionB>No codenames</optionB>
+        <optionC>Names of sweets</optionC>
+        <optionD>Female firstnames ending with an 'a'</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>Who initiated the Ubuntu project?</text>
+        <optionA>US software developer Andrew Rubin</optionA>
+        <optionB>South African millionaire Mark Shuttleworth</optionB>
+        <optionC>Finnish-American Linus Torvalds</optionC>
+        <optionD>Canadian-American Elon Reeve Musk</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>FPGA stands for ...</text>
+        <optionA>Field Processing Gate Array</optionA>
+        <optionB>Field-Programmable Gate Array</optionB>
+        <optionC>Finnish-American Linus Torvalds</optionC>
+        <optionD>Field-Physics Graphics Array</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>Meltdown is ...</text>
+        <optionA>Hardware vulnerability in processors</optionA>
+        <optionB>Ice used for cooling server farms</optionB>
+        <optionC>Ice cream variety from Google</optionC>
+        <optionD>Hidden game in the Chrome browser</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>First iPhone came onto the German market on ...</text>
+        <optionA>November 9, 2007</optionA>
+        <optionB>July 11th, 2008</optionB>
+        <optionC>June 29, 2007</optionC>
+        <optionD>August 08, 2009</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What's the Gang of Four?</text>
+        <optionA>An umbrella term for STEM subjects</optionA>
+        <optionB>Four hackers of the 2017 WannaCry attack</optionB>
+        <optionC>Four authors of a book from the 90ies</optionC>
+        <optionD>Four principles of Object Oriented Programming</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>In the mid-2000s, graphics cards were replaced having ...</text>
+        <optionA>an AGP slot</optionA>
+        <optionB>a PCI-Express slot</optionB>
+        <optionC>a S-ATA slot</optionC>
+        <optionD>an AHCI slot</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>How do you call the empty square between a horizontal and vertical scrollbar?</text>
+        <optionA>knoblet</optionA>
+        <optionB>corner</optionB>
+        <optionC>thumb</optionC>
+        <optionD>slot</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>Which of these Linux distributions is best known for its privacy and security options?</text>
+        <optionA>Ubuntu</optionA>
+        <optionB>Mint</optionB>
+        <optionC>Zorin OS</optionC>
+        <optionD>Parrot OS</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>Which of those Linux distributions is the youngest?</text>
+        <optionA>Red Hat Linux</optionA>
+        <optionB>Blackarch</optionB>
+        <optionC>Parrot OS</optionC>
+        <optionD>Kali Linux</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>Which normal form forbids for the first time to have non-key attributes dependent on other non-key attributes?</text>
+        <optionA>1NF</optionA>
+        <optionB>2NF</optionB>
+        <optionC>3NF</optionC>
+        <optionD>4NF</optionD>
+        <correct>3</correct>
+    </questions>
+    
+    <questions>
+        <text>Who is the responsible developer of the graphics format JFIF which is used in JPEG images?</text>
+        <optionA>Lewis Hamilton</optionA>
+        <optionB>Eric Hamilton</optionB>
+        <optionC>Linda Hamilton</optionC>
+        <optionD>Leslie Hamilton</optionD>
+        <correct>2</correct>
+    </questions>
+    
+	<questions>
+        <text>Which University has used the picture "Lenna Sjööblom" for the first time? The University of...</text>
+        <optionA>Southern Mississippi</optionA>
+        <optionB>Southern Indiana</optionB>
+        <optionC>Southern Queensland</optionC>
+        <optionD>Southern California</optionD>
+        <correct>4</correct>
+    </questions>
+    
+    <questions>
+        <text>Which of these statements about Rust were true in 2020?</text>
+        <optionA>The unofficial mascot Ferris was made by Karen Rustad Tölva.</optionA>
+        <optionB>The language was officially released in 2016 by Mozilla.</optionB>
+        <optionC>The project originated from a personal project by Graydon Hoare.</optionC>
+        <optionD>The Chrome JavaScript engine is written in Rust.</optionD>
+        <correct>1,3</correct>
+    </questions>
+    
+	<questions>
+        <text>Who gave the presentation "Null References: The Billion Dollar Mistake"?</text>
+        <optionA>Tony Hawk</optionA>
+        <optionB>Tony Hoare</optionB>
+        <optionC>Tony Stark</optionC>
+        <optionD>Tony Curtis</optionD>
+        <correct>2</correct>
+    </questions>
+    
+	<questions>
+        <text>What term was coined by Alan Kay in 1967?</text>
+        <optionA>Mutual Exclusion</optionA>
+        <optionB>Internet (ARPAnet)</optionB>
+        <optionC>Object-Oriented Programming</optionC>
+        <optionD>Integrated Circuit</optionD>
+        <correct>3</correct>
+    </questions>
+    
+    <questions>
+        <text>What did the abbreviation ARPAnet stand for?</text>
+        <optionA>Address Resolution Projects Agency Network</optionA>
+        <optionB>Active Resolution Projects Agency Network</optionB>
+        <optionC>Address Redundancy Projects Agency Network</optionC>
+        <optionD>Advanced Research Projects Agency Network</optionD>
+        <correct>4</correct>
+    </questions>
+    
+	<questions>
+        <text>In which year Arthur Appel has described Backward Ray Tracing for the first time?</text>
+        <optionA>1999</optionA>
+        <optionB>1989</optionB>
+        <optionC>1979</optionC>
+        <optionD>1969</optionD>
+        <correct>4</correct>
     </questions>
 </quiz>
