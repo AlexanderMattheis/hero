@@ -1,0 +1,19 @@
+<quiz>
+    <questions>
+        <text>What is the first period of the earth's Paleozoic Era?</text>
+        <optionA>Cambrian</optionA>
+        <optionB>Triassic</optionB>
+        <optionC>Paleogene</optionC>
+        <optionD>Jura</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>Where can you see the Darwin Arch?</text>
+        <optionA>Galápagos Islands, Ecuador</optionA>
+        <optionB>Shrewsbury, Shropshire</optionB>
+        <optionC>Ellengowan, Australia</optionC>
+        <optionD>London, England</optionD>
+        <correct>2</correct>
+    </questions>
+</quiz>

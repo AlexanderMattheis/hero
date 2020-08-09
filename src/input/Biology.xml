@@ -1,0 +1,10 @@
+<quiz>
+    <questions>
+        <text>Which of these statements are true?</text>
+        <optionA>The sting of the bee emerged from the apparatus for oviposition<optionA>
+        <optionB>Only female bees and wasps have a sting</optionB>
+        <optionC>The poison sting of the wasp has barbs</optionC>
+        <optionD>Bee's generally do not die after a sting</optionD>
+        <correct>1,2</correct>
+    </questions>
+</quiz>
