@@ -1,10 +1,30 @@
 <quiz>
     <questions>
-        <text>Which of these statements are true?</text>
-        <optionA>The sting of the bee emerged from the apparatus for oviposition<optionA>
-        <optionB>Only female bees and wasps have a sting</optionB>
-        <optionC>The poison sting of the wasp has barbs</optionC>
-        <optionD>Bee's generally do not die after a sting</optionD>
-        <correct>1,2</correct>
+        <text>Which of these statements are generally true?</text>
+        <optionA>Bees and wasps hibernate in winter<optionA>
+        <optionB>Male bees and wasps do not have a sting</optionB>
+        <optionC>Wasps die after a sting</optionC>
+        <optionD>Bees do not die after a sting</optionD>
+        <correct>2</correct>
+    </questions>
+
+    <questions>
+        <text>What are the mouth tools of insects and crustaceans called?</text>
+        <optionA>Mandibles<optionA>
+        <optionB>Tibia</optionB>
+        <optionC>Caput</optionC>
+        <optionD>Thorax</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>In which group of insects do flies belong?</text>
+        <optionA>Lepidoptera<optionA>
+        <optionB>Orthoptera</optionB>
+        <optionC>Hymenoptera</optionC>
+        <optionD>Diptera</optionD>
+        <correct>4</correct>
     </questions>
 </quiz>
+
+
