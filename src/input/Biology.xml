@@ -1,11 +1,11 @@
 <quiz>
     <questions>
-        <text>Which of these statements are generally true?</text>
-        <optionA>Bees and wasps hibernate in winter<optionA>
-        <optionB>Male bees and wasps do not have a sting</optionB>
-        <optionC>Wasps die after a sting</optionC>
-        <optionD>Bees do not die after a sting</optionD>
-        <correct>2</correct>
+        <text>Which of these statements about bees are true?</text>
+        <optionA>Bees do not hibernate, they build a winter cluster<optionA>
+        <optionB>Drones do not have a sting</optionB>
+        <optionC>Bees die after a sting</optionC>
+        <optionD>Drones develop from unfertilized eggs</optionD>
+        <correct>1,2,3,4</correct>
     </questions>
 
     <questions>
@@ -24,6 +24,15 @@
         <optionC>Hymenoptera</optionC>
         <optionD>Diptera</optionD>
         <correct>4</correct>
+    </questions>
+
+    <questions>
+        <text>What are the butterflies called in Germany that look like hummingbirds?</text>
+        <optionA>Kolibrischwärmer<optionA>
+        <optionB>Taubenschwänzchen</optionB>
+        <optionC>Distelfalter</optionC>
+        <optionD>Birkenspanner</optionD>
+        <correct>1,2</correct>
     </questions>
 </quiz>
 
