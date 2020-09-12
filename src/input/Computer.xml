@@ -250,4 +250,13 @@
         <optionD>1969</optionD>
         <correct>4</correct>
     </questions>
+	
+	<questions>
+        <text>What was apparently the codename of C#?<text>
+        <optionA>Cool</optionA>
+        <optionB>Clever</optionB>
+        <optionC>Chic</optionC>
+        <optionD>Chief</optionD>
+        <correct>1</correct>
+    </questions>
 </quiz>
