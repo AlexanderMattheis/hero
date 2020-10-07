@@ -1,0 +1,28 @@
+<quiz>
+    <questions>
+        <text>What is alpha radiation made of?</text>
+        <optionA>Helium-4 Nucleus</optionA>
+        <optionB>negatively charged electrons</optionB>
+        <optionC>positively charged positrons</optionC>
+        <optionD>only protons</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>What is fission?</text>
+        <optionA>The splitting of electrons</optionA>
+        <optionB>The fusion of atomic nuclei</optionB>
+        <optionC>The splitting of atomic nuclei</optionC>
+        <optionD>The fusion of photons</optionD>
+        <correct>3</correct>
+    </questions>
+
+    <questions>
+        <text>What is one Ångström?</text>
+        <optionA>The one millionth part of a millimeter</optionA>
+        <optionB>The ten millionth part of a millimeter</optionB>
+        <optionC>The hundred millionth part of a millimeter</optionC>
+        <optionD>The one billionth part of a millimeter</optionD>
+        <correct>2</correct>
+    </questions>
+</quiz>

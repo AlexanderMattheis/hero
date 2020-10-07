@@ -1,0 +1,109 @@
+<quiz>
+    <questions>
+        <text>Who is officially considered the inventor of the periodic table?</text>
+        <optionA>Julius Lothar Meyer</optionA>
+        <optionB>Dmitri Iwanowitsch Mendelejew</optionB>
+        <optionC>John Alexander Reina Newlands</optionC>
+        <optionD>Johann Wolfgang Döbereiner</optionD>
+        <correct>1,2</correct>
+    </questions>
+
+    <questions>
+        <text>When was the Bohr atomic model replaced by the quantum mechanical atomic model?</text>
+        <optionA>1905</optionA>
+        <optionB>1913</optionB>
+        <optionC>1916</optionC>
+        <optionD>1925</optionD>
+        <correct>4</correct>
+    </questions>
+
+    <questions>
+        <text>What corresponds to the atomic number?</text>
+        <optionA>Position in the periodic system</optionA>
+        <optionB>Number of Electronselctro</optionB>
+        <optionC>Number of Protons</optionC>
+        <optionD>Number of Neutrons</optionD>
+        <correct>1,3</correct>
+    </questions>
+
+    <questions>
+        <text>How many periods does the periodic table have?</text>
+        <optionA>6</optionA>
+        <optionB>7</optionB>
+        <optionC>8</optionC>
+        <optionD>9</optionD>
+        <correct>2</correct>
+    </questions>
+
+    <questions>
+        <text>How many elements does the periodic table have in 2020?</text>
+        <optionA>42</optionA>
+        <optionB>87</optionB>
+        <optionC>110</optionC>
+        <optionD>118</optionD>
+        <correct>4</correct>
+    </questions>
+
+    <questions>
+        <text>What is an ion?</text>
+        <optionA>A quark with an electric charge</optionA>
+        <optionB>A hadron with an electric charge</optionB>
+        <optionC>An neutron with an electric charge</optionC>
+        <optionD>An atom or molecule with an electric charge</optionD>
+        <correct>4</correct>
+    </questions>
+
+    <questions>
+        <text>What is an acid in subatomic terms?</text>
+        <optionA>A proton emitting substance</optionA>
+        <optionB>A proton absorbing substance</optionB>
+        <optionC>An electron emitting substance</optionC>
+        <optionD>An electron absorbing substance</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>What does a mole of carbon atoms weight without considering light electrons?</text>
+        <optionA>12 Nanogram</optionA>
+        <optionB>12 Microgram</optionB>
+        <optionC>12 Milligram</optionC>
+        <optionD>12 Gram</optionD>
+        <correct>4</correct>
+    </questions>
+
+    <questions>
+        <text>When is a liquid acidic?</text>
+        <optionA>For a pH value less than 7</optionA>
+        <optionB>For a pH value less than or equal 7</optionB>
+        <optionC>For a pH value higher than or equal 7</optionC>
+        <optionD>For a pH value higher than 7</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>What is a Döbereiner's Feuerzeug?</text>
+        <optionA>A lighter without a jet of flame</optionA>
+        <optionB>An electric lighter</optionB>
+        <optionC>A gas lighter</optionC>
+        <optionD>A shaker lighter</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>How do chemical catalysts work?</text>
+        <optionA>They are used up and thus provide additional energy</optionA>
+        <optionB>They weaken or strengthen bonds between atoms</optionB>
+        <optionC>They react with the substances and are converted into other substances</optionC>
+        <optionD>They emit neutrons and thus weaken bonds between atoms</optionD>
+        <correct>2</correct>
+    </questions>
+
+    <questions>
+        <text>What is a redox reaction?</text>
+        <optionA>Transfer of positrons</optionA>
+        <optionB>Transfer of neutrons</optionB>
+        <optionC>Transfer of protons</optionC>
+        <optionD>Transfer of electrons</optionD>
+        <correct>4</correct>
+    </questions>
+</quiz>

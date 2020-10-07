@@ -1,0 +1,37 @@
+<quiz>
+    <questions>
+        <text>What is meant by inflationary expansion?</text>
+        <optionA>A theory about exponentially increasing space in early universe</optionA>
+        <optionB>A theory about exponentially many metorite impacts on the young earth</optionB>
+        <optionC>A theory about exponentially many atoms in molecular bonds</optionC>
+        <optionD>A theory about exponentially increasing number of species before humans conquered the worlds</optionD>
+        <correct>1</correct>
+    </questions>
+
+    <questions>
+        <text>How large is the excess of matter compared to antimatter at the big bang assumed to be?</text>
+        <optionA>One trillionth</optionA>
+        <optionB>One billionth </optionB>
+        <optionC>One millionth</optionC>
+        <optionD>One hundredth</optionD>
+        <correct>2</correct>
+    </questions>
+
+    <questions>
+        <text>What is the ratio of atoms to dark matter to dark energy?</text>
+        <optionA>1:80:19</optionA>
+        <optionB>5:26:69</optionB>
+        <optionC>29:31:40</optionC>
+        <optionD>45:32:23</optionD>
+        <correct>2</correct>
+    </questions>
+
+    <questions>
+        <text>What do Fraunhofer lines allow?</text>
+        <optionA>To determine the elements composition of distant stars</optionA>
+        <optionB>To draw the Pythogoras triangle in four-dimensional space</optionB>
+        <optionC>To determine the distance to stars using the redshift.</optionC>
+        <optionD>To determine the rotation of start using the Doppler effect</optionD>
+        <correct>1,3,4</correct>
+    </questions>
+</quiz>
