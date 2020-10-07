@@ -34,6 +34,69 @@
         <optionD>Birkenspanner</optionD>
         <correct>1,2</correct>
     </questions>
+	
+	<questions>
+        <text>Which statement about ants is true for most species?</text>
+        <optionA>Only queens have wings<optionA>
+        <optionB>Only male ants have no wings</optionB>
+        <optionC>Only female ants have wings</optionC>
+        <optionD>Only queens and male ants have wings</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>How is the birdlike dinosaur from which our birds originated called?</text>
+        <optionA>Archaeopteryx<optionA>
+        <optionB>Vercingetoryx</optionB>
+        <optionC>Oslomernyx</optionC>
+        <optionD>Ostorotyx</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>How loud can the lutes that bats make be in the maximum?</text>
+        <optionA>Below 50 dB<optionA>
+        <optionB>Between 50 dB and 80 dB</optionB>
+        <optionC>Between 80 dB and 110 dB</optionC>
+        <optionD>Over 110 dB</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>For which female arthropods it is claimed that it eats the male after copulation?</text>
+        <optionA>Mantis<optionA>
+        <optionB>Black Widow</optionB>
+        <optionC>Zebra Longwing</optionC>
+        <optionD>Honey Bee</optionD>
+        <correct>1,2</correct>
+    </questions>
+	
+	<questions>
+        <text>To which suborder do bees, wasps and ants belong in Germany?</text>
+        <optionA>Stechimmen<optionA>
+        <optionB>Legimmen</optionB>
+        <optionC>Fimmen</optionC>
+        <optionD>Bisimmen</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What are the differences between Microbats and Megabats?</text>
+        <optionA>Microbats use echolocation and Megabats don't<optionA>
+        <optionB>Microbats are usually smaller than Megabats</optionB>
+        <optionC>Microbats are nocturnal and Megabats are active at dusk</optionC>
+        <optionD>Microbats are closer related to mice and Megabats are closer related to foxes</optionD>
+        <correct>1,2,3</correct>
+    </questions>
+	
+	<questions>
+        <text>How is the change of feathers called in Germany?</text>
+        <optionA>Mauser<optionA>
+        <optionB>Torpor</optionB>
+        <optionC>Fetten</optionC>
+        <optionD>Atzen</optionD>
+        <correct>1</correct>
+    </questions>
 </quiz>
 
 
