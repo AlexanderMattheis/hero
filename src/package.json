@@ -7,7 +7,7 @@
     "package": "electron-packager . hero --overwrite --icon=hero.ico --out=release-builds"
   },
   "devDependencies": {
-    "electron": "^5.0.3"
+    "electron": "^9.4.0"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
