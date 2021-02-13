@@ -106,4 +106,58 @@
         <optionD>Transfer of electrons</optionD>
         <correct>4</correct>
     </questions>
+	
+	<questions>
+        <text>What does mafic mean?</text>
+        <optionA>Rich in magnesium and iron</optionA>
+        <optionB>Low in magnesium and iron</optionB>
+        <optionC>Rich only in magnesium</optionC>
+        <optionD>Rich only in iron</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What color is the olivine mineral?</text>
+        <optionA>Red</optionA>
+        <optionB>Green</optionB>
+        <optionC>Blue</optionC>
+        <optionD>Yellow</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>What is the most common volcanic rock?</text>
+        <optionA>Quartz </optionA>
+        <optionB>Pyroxene</optionB>
+        <optionC>Basalt</optionC>
+        <optionD>Feldspar</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>What is Fool's Gold called chemically?</text>
+        <optionA>Azurit</optionA>
+        <optionB>Dendrit</optionB>
+        <optionC>Ferrit</optionC>
+        <optionD>Pyrit</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>What is the ratio of salt to water in typical seawater?</text>
+        <optionA>15g:985g</optionA>
+        <optionB>35g:965g</optionB>
+        <optionC>50g:950g</optionC>
+        <optionD>80g:920g</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>What is the chemical name of typical lime?</text>
+        <optionA>Sodium bicarbonate</optionA>
+        <optionB>Calcium carbonate</optionB>
+        <optionC>Potassium carbonate</optionC>
+        <optionD>Magnesium carbonate </optionD>
+        <correct>2</correct>
+    </questions>
 </quiz>
