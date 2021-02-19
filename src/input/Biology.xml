@@ -97,6 +97,24 @@
         <optionD>Atzen</optionD>
         <correct>1</correct>
     </questions>
+	
+	<questions>
+        <text>When did the dinosaurs become extinct? About ...</text>
+        <optionA>15 million years ago<optionA>
+        <optionB>30 million years ago</optionB>
+        <optionC>45 million years ago</optionC>
+        <optionD>65 million years ago</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>Which carbon isotope is used for determining the age of a living being?</text>
+        <optionA>C11<optionA>
+        <optionB>C12</optionB>
+        <optionC>C13</optionC>
+        <optionD>C14</optionD>
+        <correct>4</correct>
+    </questions>
 </quiz>
 
 
