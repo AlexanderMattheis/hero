@@ -16,4 +16,13 @@
         <optionD>London, England</optionD>
         <correct>1</correct>
     </questions>
+	
+    <questions>
+        <text>What percentage of the earth is covered with water?</text>
+        <optionA>92 percent</optionA>
+        <optionB>71 percent</optionB>
+        <optionC>60 percent</optionC>
+        <optionD>49 percent</optionD>
+        <correct>2</correct>
+    </questions>
 </quiz>

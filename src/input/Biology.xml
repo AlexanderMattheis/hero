@@ -108,12 +108,21 @@
     </questions>
 	
 	<questions>
-        <text>Which carbon isotope is used for determining the age of a living being?</text>
+        <text>Which carbon isotope is used due to its half-life of 5730 years for determining the age of a living being?</text>
         <optionA>C11<optionA>
         <optionB>C12</optionB>
         <optionC>C13</optionC>
         <optionD>C14</optionD>
         <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>What are key differences between gram positive bacteria in relation to gram negative bacteria?</text>
+        <optionA>an additional outer membrane<optionA>
+        <optionB>no additional outer membrane</optionB>
+        <optionC>thick cell wall</optionC>
+        <optionD>thin cell wall</optionD>
+        <correct>2,3</correct>
     </questions>
 </quiz>
 

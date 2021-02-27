@@ -162,20 +162,29 @@
     </questions>
 	
 	<questions>
-        <text>Which carbon isotope is used due to its half-life of 5730 years for determining the age of a living being?</text>
-        <optionA>C11<optionA>
-        <optionB>C12</optionB>
-        <optionC>C13</optionC>
-        <optionD>C14</optionD>
-        <correct>4</correct>
-    </questions>
-	
-	<questions>
         <text>How was petroleum formed?</text>
         <optionA>Dead forest was buried by water and decayed</optionA>
         <optionB>Remains of microorganisms which got into oxygen-deficient environment</optionB>
         <optionC>High pressure and temperatures up to 1400°C turn carbon into petroleum</optionC>
         <optionD>A remnants of violent stellar explosions</optionD>
         <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>Who discovered hydrogen?</text>
+        <optionA>Joseph Priestley</optionA>
+        <optionB>Daniel Rutherford</optionB>
+        <optionC>Joseph Black</optionC>
+        <optionD>Henry Cavendish</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>At what temperature is the density of water highest?</text>
+        <optionA>-4° Celsius</optionA>
+        <optionB>-2° Celsius</optionB>
+        <optionC>0° Celsius</optionC>
+        <optionD>4° Celsius</optionD>
+        <correct>4</correct>
     </questions>
 </quiz>
