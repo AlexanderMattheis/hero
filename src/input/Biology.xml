@@ -124,6 +124,51 @@
         <optionD>thin cell wall</optionD>
         <correct>2,3</correct>
     </questions>
+	
+	<questions>
+        <text>Another name for the Krebs cycle is ...</text>
+        <optionA>cancer cycle<optionA>
+        <optionB>citric acid cycle</optionB>
+        <optionC>water cycle</optionC>
+        <optionD>oxygen cycle</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>What do anaerobic mean? Absence of ...</text>
+        <optionA>oxygen<optionA>
+        <optionB>carbon dioxide</optionB>
+        <optionC>nitrogen</optionC>
+        <optionD>steam</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What happens during glycolysis?</text>
+        <optionA>sugar is decomposed<optionA>
+        <optionB>fat is decomposed</optionB>
+        <optionC>proteins are decomposed</optionC>
+        <optionD>minerals are decomposed</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What do ribosomes do?</text>
+        <optionA>using carbon dioxide and water to create oxygen and sugar<optionA>
+        <optionB>using oxygen to gain energy in the form of ATP</optionB>
+        <optionC>translate mRNA into proteins</optionC>
+        <optionD>deliver right amino acids</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>Which statement is true according to the endosymbiont theory?</text>
+        <optionA>mitochondria and chloroplasts were bacteria<optionA>
+        <optionB>organisms can inherit traits that they have acquired during their lifetime</optionB>
+        <optionC>all living organisms are made up of cells</optionC>
+        <optionD>material carriers of heredity are only in the cell nucleus</optionD>
+        <correct>1</correct>
+    </questions>
 </quiz>
 
 
