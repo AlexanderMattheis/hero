@@ -169,6 +169,159 @@
         <optionD>material carriers of heredity are only in the cell nucleus</optionD>
         <correct>1</correct>
     </questions>
+	
+	<questions>
+        <text>Which enzyme in saliva breaks down Glucose?</text>
+        <optionA>Amylase<optionA>
+        <optionB>Pepsin</optionB>
+        <optionC>Lactase</optionC>
+        <optionD>Malstase</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What is the order of the intestine?</text>
+        <optionA>Small Intestine, Duodenum and Large Intestine<optionA>
+        <optionB>Duodenum, Small Intestine and Large Intestine</optionB>
+        <optionC>Large Intestine, Duodenum and Small Intestine</optionC>
+        <optionD>Large Intestine, Small Intestine and Duodenum</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	<questions>
+        <text>How much does the microbiome weigh on average in an adult human?</text>
+        <optionA>2 g<optionA>
+        <optionB>20 g</optionB>
+        <optionC>200 g</optionC>
+        <optionD>2000 g</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>How much does the microbiome can weight in an healthy adult human?</text>
+        <optionA>about 2 g<optionA>
+        <optionB>about 20 g</optionB>
+        <optionC>about 200 g</optionC>
+        <optionD>about 2000 g</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>Why shouldn't you eat green parts on potatoes?</text>
+        <optionA>Lignin<optionA>
+        <optionB>Pepsin</optionB>
+        <optionC>Solanin</optionC>
+        <optionD>Adenin</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>What is Cellulose and Chitin biologically?</text>
+        <optionA>Minerals<optionA>
+        <optionB>Fat</optionB>
+        <optionC>Protein</optionC>
+        <optionD>Sugar</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>How many synapses do humans have? About ...</text>
+        <optionA>125 million synapses<optionA>
+        <optionB>125 billion synapses</optionB>
+        <optionC>125 trillion synapses</optionC>
+        <optionD>125 quadrillion synapses</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>What are cell membranes of humans made of?</text>
+        <optionA>Monoxide<optionA>
+        <optionB>Acids</optionB>
+        <optionC>Lipids</optionC>
+        <optionD>Peptide</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>What does chirality mean?</text>
+        <optionA>just not mirror symmetrical<optionA>
+        <optionB>mirror symmetrical</optionB>
+        <optionC>not symmetrical at all</optionC>
+        <optionD>antisymmetrical</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>Which fats are not recognized by digestive enzymes?</text>
+        <optionA>hydrogenated fats<optionA>
+        <optionB>vegetable fats</optionB>
+        <optionC>animal fats</optionC>
+        <optionD>unhydrogenated fats</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What is mRNA?</text>
+        <optionA>a template read from DNA for a protein<optionA>
+        <optionB>>a transporter for amino acids</optionB>
+        <optionC>RNA of ribosomes</optionC>
+        <optionD>a non-coding RNA</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>Bacteria and Archaea are ...</text>
+        <optionA>eukaryotic<optionA>
+        <optionB>prokaryotic</optionB>
+        <optionC>unicellular</optionC>
+        <optionD>multicellular</optionD>
+        <correct>2,3</correct>
+    </questions>
+	
+	<questions>
+        <text>Where does the translation of the RNA into proteins begin? On Codon ...</text>
+        <optionA>AUG<optionA>
+        <optionB>UAA</optionB>
+        <optionC>UAG</optionC>
+        <optionD>UGA</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What is common sugar also called?</text>
+        <optionA>Sucrose<optionA>
+        <optionB>Glucose</optionB>
+        <optionC>Ribose</optionC>
+        <optionD>Fructose</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What percentage of the body consists of water?</text>
+        <optionA>0-20%<optionA>
+        <optionB>20-40%</optionB>
+        <optionC>40-60%</optionC>
+        <optionD>60-80%</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>How many different amino acids can humans produce?</text>
+        <optionA>18<optionA>
+        <optionB>20</optionB>
+        <optionC>21</optionC>
+        <optionD>22</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>What does insulin do?</text>
+        <optionA>binds glucose dissolved in blood and brings it into cells<optionA>
+        <optionB>promotes the breakdown of glucose</optionB>
+        <optionC>increases blood sugar levels</optionC>
+        <optionD>lowers blood sugar levels</optionD>
+        <correct>1,2,4</correct>
+    </questions>
 </quiz>
 
 
