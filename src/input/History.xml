@@ -1,0 +1,30 @@
+<quiz>
+	<questions>
+        <text>From which cup did Socrates drink and die?</text>
+        <optionA>Pythagoras cup<optionA>
+        <optionB>Nestor Cup</optionB>
+        <optionC>Hemlock Cup</optionC>
+        <optionD>Archimedes Cup</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>When was the Meissen Porcelain Manufactory founded?</text>
+        <optionA>1517<optionA>
+        <optionB>1618</optionB>
+        <optionC>1710</optionC>
+        <optionD>1871</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>What did a soldier hand to Jesus hanging on the cross?</text>
+        <optionA>sponge full of vinegar water<optionA>
+        <optionB>half a loaf of bread</optionB>
+        <optionC>cup full of wine</optionC>
+        <optionD>sprig of mistletoe</optionD>
+        <correct>1</correct>
+    </questions>
+</quiz>
+
+

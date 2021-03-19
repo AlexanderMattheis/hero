@@ -322,6 +322,24 @@
         <optionD>lowers blood sugar levels</optionD>
         <correct>1,2,4</correct>
     </questions>
+	
+	<questions>
+        <text>What level must be thoroughly controlled when growing wheat?</text>
+        <optionA>Lysergic acid<optionA>
+        <optionB>Carbonic acid</optionB>
+        <optionC>Phosphoric acid</optionC>
+        <optionD>Acetic acid</optionD>
+        <correct>1</correct>
+    </questions>
+
+	<questions>
+        <text>What is the name of the puffer fish poison?</text>
+        <optionA>Atropin<optionA>
+        <optionB>Tetrodotoxin</optionB>
+        <optionC>Apitoxin</optionC>
+        <optionD>Solanin</optionD>
+        <correct>2</correct>
+    </questions>
 </quiz>
 
 

@@ -118,10 +118,10 @@
 	
 	<questions>
         <text>What color is the olivine mineral?</text>
-        <optionA>Red</optionA>
-        <optionB>Green</optionB>
-        <optionC>Blue</optionC>
-        <optionD>Yellow</optionD>
+        <optionA>red</optionA>
+        <optionB>green</optionB>
+        <optionC>blue</optionC>
+        <optionD>yellow</optionD>
         <correct>2</correct>
     </questions>
 	
@@ -187,4 +187,42 @@
         <optionD>4° Celsius</optionD>
         <correct>4</correct>
     </questions>
+	
+	<questions>
+        <text>In which colors do salts of sodium, lithium, barium and copper burn?</text>
+        <optionA>yellow, red, green, blue</optionA>
+        <optionB>yellow, red, blue, green</optionB>
+        <optionC>red, yellow, blue, green</optionC>
+        <optionD>red, green, yellow, blue</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What substance is used to make porcelain?</text>
+        <optionA>Piemontit</optionA>
+        <optionB>Amazonit</optionB>
+        <optionC>Kaolinit</optionC>
+        <optionD>Azurit</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	<questions>
+        <text>What metals is bronze made of?</text>
+        <optionA>copper and tin</optionA>
+        <optionB>gold and silver</optionB>
+        <optionC>iron and copper</optionC>
+        <optionD>beryllium and calcium</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>What medical product was introduced in 1899?</text>
+        <optionA>Penicillin</optionA>
+        <optionB>Asperin</optionB>
+        <optionC>Insulin</optionC>
+        <optionD>Codein</optionD>
+        <correct>2</correct>
+    </questions>
+	
+	
 </quiz>
