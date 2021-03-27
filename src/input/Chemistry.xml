@@ -224,5 +224,39 @@
         <correct>2</correct>
     </questions>
 	
+	<questions>
+        <text>Who was/were the main developer of nitrogen extraction from the air?</text>
+        <optionA>Fritz Jakob Haber und Carl Bosch</optionA>
+        <optionB>Friedrich Bayer und  Johann Friedrich Weskott</optionB>
+        <optionC>Friedrich Engelhorn</optionC>
+        <optionD>Fritz Henkel</optionD>
+        <correct>1</correct>
+    </questions>
 	
+	<questions>
+        <text>What can be found in vehicle catalyers?</text>
+        <optionA>Aerolite</optionA>
+        <optionB>Arsenolite</optionB>
+        <optionC>Zoolith</optionC>
+        <optionD>Zeolite</optionD>
+        <correct>4</correct>
+    </questions>
+	
+	<questions>
+        <text>What acid burns on the skin after touching nettles?</text>
+        <optionA>Formic acid</optionA>
+        <optionB>Acetic Acid</optionB>
+        <optionC>Carbonic Acid</optionC>
+        <optionD>Citric Acid</optionD>
+        <correct>1</correct>
+    </questions>
+	
+	<questions>
+        <text>Who is the inventor of the fuse?</text>
+        <optionA>Alfred Bernhard Nobel</optionA>
+        <optionB>Carl Friedrich Benz</optionB>
+        <optionC>Thomas Alva Edison</optionC>
+        <optionD>Charles Babbage</optionD>
+        <correct>1</correct>
+    </questions>
 </quiz>
