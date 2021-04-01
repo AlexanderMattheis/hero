@@ -43,4 +43,13 @@
         <optionD>Charon</optionD>
         <correct>1</correct>
     </questions>
+	
+	<questions>
+        <text>When did Konstantin Eduardowitsch Ziolkowski come up with the idea for the space lift? </text>
+        <optionA>1232</optionA>
+        <optionB>1895</optionB>
+        <optionC>1957</optionC>
+        <optionD>1969</optionD>
+        <correct>2</correct>
+    </questions>
 </quiz>
