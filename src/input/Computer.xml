@@ -261,7 +261,7 @@
     </questions>
 	
 	<questions>
-        <text>What was the name of the first object-oriented language?<text>
+        <text>What was the name of the first object-oriented programming language?<text>
         <optionA>C++</optionA>
         <optionB>Smalltalk</optionB>
         <optionC>Simula</optionC>
@@ -269,5 +269,21 @@
         <correct>3</correct>
     </questions>
 	
-	 
+	<questions>
+        <text>What was the name of the first programming language for a computer?<text>
+        <optionA>C</optionA>
+        <optionB>Simula</optionB>
+        <optionC>COBOL</optionC>
+        <optionD>Plankalkül</optionD>
+        <correct>4</correct>
+    </questions> 
+	
+	<questions>
+        <text>Who wrote 1836/1837 the first programs?<text>
+        <optionA>Charles Babbage</optionA>
+        <optionB>Ada Lovelace</optionB>
+        <optionC>Isaac Newton</optionC>
+        <optionD>Konrad Zuse</optionD>
+        <correct>1</correct>
+    </questions> 
 </quiz>
