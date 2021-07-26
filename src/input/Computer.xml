@@ -259,4 +259,15 @@
         <optionD>Chief</optionD>
         <correct>1</correct>
     </questions>
+	
+	<questions>
+        <text>What was the name of the first object-oriented language?<text>
+        <optionA>C++</optionA>
+        <optionB>Smalltalk</optionB>
+        <optionC>Simula</optionC>
+        <optionD>Algol 60</optionD>
+        <correct>3</correct>
+    </questions>
+	
+	 
 </quiz>
