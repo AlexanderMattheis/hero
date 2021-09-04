@@ -49,6 +49,6 @@ In multiplayer, after answering a question, a status window will appear, showing
 
 #### Taskbar Appears in Fullscreen Mode
 
-On Microsoft Windows 10, the taskbar gets displayed in fullscreen mode when the ingame status window gets enabled. To solve the problem, right-click on the Windows taskbar and select ``Taskbar Settings``. Activate the option `` Automatically hide the taskbar in desktop mode``.
+On Microsoft Windows 10, the taskbar gets displayed in fullscreen mode when the ingame status window gets enabled. To solve the problem, right-click on the Windows taskbar and select ``Taskbar Settings``. Activate the option ``Automatically hide the taskbar in desktop mode``.
 
 <img src="https://github.com/AlexanderMattheis/hero/blob/master/pics/activate_auto_hide_in_desktop_mode.PNG" width="800" height="625">
